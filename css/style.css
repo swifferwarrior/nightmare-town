@@ -15,6 +15,10 @@ p {
     font-size: 12px;
 }
 
+footer figure {
+    display: inline-block;
+}
+
 #title {
     font-size: 24px;
 }
