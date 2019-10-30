@@ -4,7 +4,8 @@ h1, h2, p {
 
 h1 {
     /*font: none none bold 24/2;*/
-    font-family: "phantom_fingers", Arial;
+    font-family: "wildwood", sans-serif;
+    font-size: 24px;
 }
 
 h2 {
@@ -21,12 +22,13 @@ footer figure {
 
 @font-face {
     font-family: "wildwood";
+    src: url("https://www.wfonts.com/download/data/2016/03/01/wildwood/JFWilwod.ttf") format("truetype");
     src: url("../fonts/JFWilwod.ttf") format("truetype");
     font-style: normal;
     font-weight: normal;
 }
 
 .title {
-    font-family: "wildwood", Arial;
+    font-family: "wildwood", sans-serif;
     font-size: 24px;
 }
