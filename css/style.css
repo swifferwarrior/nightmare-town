@@ -19,6 +19,14 @@ footer figure {
     display: inline-block;
 }
 
-#title {
+@font-face {
+    font-family: "wildwood";
+    src: url("../fonts/JFWilwod.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.title {
+    font-family: "wildwood", Arial;
     font-size: 24px;
 }
