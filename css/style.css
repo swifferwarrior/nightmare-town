@@ -1,0 +1,20 @@
+h1, h2, p {
+    font-family: Calibri;
+}
+
+h1 {
+    /*font: none none bold 24/2;*/
+    font-family: "phantom_fingers", Arial;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    font-size: 12px;
+}
+
+#title {
+    font-size: 24px;
+}
