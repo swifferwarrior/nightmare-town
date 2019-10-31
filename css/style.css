@@ -8,7 +8,7 @@ nav {
     margin: 0;
     padding: 5px 5px;
     width: auto;
-    background-color: #0D0D0D;
+    background-color: rgba(43, 12, 43 , 0.75);
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 1.5em;
@@ -16,14 +16,27 @@ nav {
 
 header {
     background-color: #0D0D0D;
-    background-image: url("../images/NT\ Banner\ 1600x400.png");
+    background-image: url("../images/darkforest.jpg");
+    background-size: contain;
+    background-position: bottom;
     border-bottom: 1px solid #000;
     position: relative;
     width: 1600px;
-    height: 400px;
+    height: 250px;
     z-index: 10;
     margin: 0;
     padding: 10px;
+}
+
+body {
+ background-color: rgba(43, 12, 43 , 0.75);
+}
+
+html {
+  background-image: url("../images/spooky-blue.jpg");
+  background-size:auto;
+  background-repeat: no-repeat;
+  background-color: rgba(43, 12, 43, 1)
 }
 
 img {
@@ -51,11 +64,13 @@ header h2{ /* Whimsically Creepy*/
     font-family: "Homemade Apple", sans-serif;
     position: relative;
     padding-right: 1fr;
+  background-color: rgba(43, 12, 43, 0);
+    
 }
 h1, h2, p, html {
     font-family: Arial, Helvetica, sans-serif;
     color: antiquewhite;
-    background-color: rgb(43, 12, 43);
+    background-color: rgba(43, 12, 43, 0.0);
 }
 
 h1 {
@@ -66,6 +81,7 @@ h1 {
 
 h2 {
     font-size: 18px;
+    background-color: rgba(43, 12, 43 , 0.0);
 }
 
 p {
@@ -75,7 +91,7 @@ p {
 
 footer {
     margin-top: 50px;
-    background-color: #0D0D0D;
+    background-color: rgba(43, 12, 43 , 0.75);
 }
 
 @font-face {
@@ -118,6 +134,11 @@ footer {
     display: block;
     font-size: 48px;
     color: #D9043D;
+    background-color: rgba(43, 12, 43 , 0.0);
+}
+
+.subtitle {
+  
 }
 
 #swiff {
@@ -131,6 +152,11 @@ footer span {
     position: relative;
     float: left;
     padding: 10px;
+}
+
+footer figure {
+  background-color: rgba(43, 12, 43, 0.75);
+  z-index: 10;
 }
 
 a, a:visited {
