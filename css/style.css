@@ -6,18 +6,21 @@ nav {
     line-height: 2;
     position: relative;
     margin: 0;
-    padding: 5px 5px;
+    padding: 10px;
     width: auto;
     background-color: rgba(43, 12, 43 , 0.75);
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
-    word-spacing: 1.5em;
+    word-spacing: 2.5em;
+    letter-spacing: 8px;
+  border-bottom: 4px black;
+  box-shadow: 5px grey;
 }
 
 header {
     background-color: #0D0D0D;
     background-image: url("../images/darkforest.jpg");
-    background-size: contain;
+    /*background-size: contain;
     background-position: bottom;
     border-bottom: 1px solid #000;
     position: relative;
@@ -25,18 +28,21 @@ header {
     height: 250px;
     z-index: 10;
     margin: 0;
-    padding: 10px;
+    padding: 10px;*/
 }
 
 body {
- background-color: rgba(43, 12, 43 , 0.75);
+  background-color: rgba(43, 12, 43 , 0.75);
+  min-width: 1000px;
+  max-width: 1600px;
 }
 
 html {
   background-image: url("../images/spooky-blue.jpg");
-  background-size:auto;
-  background-repeat: no-repeat;
-  background-color: rgba(43, 12, 43, 1)
+  /*background-size:auto;
+  background-repeat: no-repeat;*/
+  background-color: rgba(43, 12, 43, 1);
+  max-width: 1600px;
 }
 
 img {
@@ -64,7 +70,7 @@ header h2{ /* Whimsically Creepy*/
     font-family: "Homemade Apple", sans-serif;
     position: relative;
     padding-right: 1fr;
-  background-color: rgba(43, 12, 43, 0);
+    background-color: rgba(43, 12, 43, 0);
     
 }
 h1, h2, p, html {
@@ -82,15 +88,22 @@ h1 {
 h2 {
     font-size: 18px;
     background-color: rgba(43, 12, 43 , 0.0);
+    margin:0;
+    padding-left: 50px;
+    padding-top: 10px;
+
 }
 
 p {
     font-size: 14px;
     line-height: 1.75em;
+    padding: 5px 50px;
+      padding-bottom: 50px;
+  margin:0;
 }
 
 footer {
-    margin-top: 50px;
+   /* margin-top: 50px;*/
     background-color: rgba(43, 12, 43 , 0.75);
 }
 
@@ -134,11 +147,22 @@ footer {
     display: block;
     font-size: 48px;
     color: #D9043D;
+    padding-left: 30px;
+    padding-top: 8px;
     background-color: rgba(43, 12, 43 , 0.0);
 }
 
 .subtitle {
-  
+    color: blanchedalmond;
+    font-family: "Homemade Apple", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    position: relative;
+    padding-right: 50px;
+    padding-bottom: 10px;
+  margin:0;
+    text-align: right;
+    background-color: rgba(43, 12, 43, 0);
 }
 
 #swiff {
@@ -161,4 +185,15 @@ footer figure {
 
 a, a:visited {
     color: antiquewhite;
+    text-decoration: none;
   }
+
+a:hover {
+  color: #d9043d;
+}
+
+.todo {
+  margin: 0;
+  padding-bottom: 50px;
+  border-bottom: 2px antique-white;
+}
