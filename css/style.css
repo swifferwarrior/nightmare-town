@@ -1,59 +1,132 @@
+/***** NAV/HEADER *****/
 nav {
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     font-size: 14px;
     line-height: 2;
-    position: relative;
     margin: 0;
-    padding: 10px;
-    width: auto;
-    background-color: rgba(43, 12, 43 , 0.75);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: rgba(30, 10, 30 , 0.9);
     color: antiquewhite;
     font-family: Arial, Helvetica, sans-serif;
     word-spacing: 2.5em;
     letter-spacing: 8px;
-  border-bottom: 4px black;
-  box-shadow: 5px grey;
+    border-bottom: solid 1px #3c1642;
+    box-shadow: 5px grey;
+    position:inherit;
+    display: block;
+    top: 0;
+    height: 25px;
+    z-index: 15;
 }
 
 header {
     background-color: #0D0D0D;
-    background-image: url("../images/darkforest.jpg");
+    background-image: url("../images/alone.jpg");
+    background-attachment: scroll;
+    background-position: center top;
+    width: 100%;
+    position: relative;
+    /*margin: auto;*/
+    height: 175px;
+    color: #0d0d0d;
+    padding: 0;
+    border-bottom: solid 2px #0d0d0d;
+    display: block;
+    margin: 20px 0 ;
+    min-width: 970px;
+  max-width: 1300px;
+    
+    /*width: 8em*/
     /*background-size: contain;
     background-position: bottom;
     border-bottom: 1px solid #000;
     position: relative;
     width: 1600px;
-    height: 250px;
+    height: 250px;*/
     z-index: 10;
-    margin: 0;
+   /* margin: 0;
     padding: 10px;*/
 }
+
+.title {
+    font-family: "Fredericka the Great", sans-serif;
+    text-align: start;
+    display: block;
+    font-size: 48px;
+    color: #D9043D;
+    padding-left: 30px;
+    padding-top: 8px;
+    background-color: rgba(43, 12, 43 , 0.0);
+}
+
+.subtitle {
+    color: blanchedalmond;
+    font-family: "Homemade Apple", sans-serif;
+    letter-spacing: 1px;
+    font-size: 20px;
+    position: relative;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    
+  margin:0;
+    text-align: right;
+    background-color: rgba(43, 12, 43, 0);
+}
+
+
+
+/***** BODY *****/
 
 body {
   background-color: rgba(43, 12, 43 , 0.75);
   min-width: 1000px;
-  max-width: 1600px;
+  max-width: 1300px;
+  top: 14px;
+  width: 100%;
+  position: relative;
+  display: table;
+  vertical-align: middle;
+  min-width: 970px;
+  /*max-width: 1000px;*/
+
+}
+
+main {
+  position: relative;
+    min-width: 970px;
+  max-width: 1300px;
 }
 
 html {
-  background-image: url("../images/spooky-blue.jpg");
-  /*background-size:auto;
-  background-repeat: no-repeat;*/
-  background-color: rgba(43, 12, 43, 1);
-  max-width: 1600px;
+  background: url("../images/foggy.jpg") no-repeat center center fixed; /* Stretch to fit */
+  background-size:185%;
+  /*background-color: black;/*rgba(43, 12, 43, 1);*/
+  background-position: -50px -100px;
+  /*min-width: 1000px;
+  max-width: 1300px;*/
+  display: table-cell;
+  vertical-align: middle;
+  background-color: black;
+  position: absolute;
+  /*margin: 0;
+  padding:0;*/
 }
 
-img {
+/*img {
     width: 100%;
     height: auto;
-}
+}*/
 
 header, footer {
     background-color: #0D0D0D;
     text-align: center;
     min-width: 500px;
+    align-content: center;
+  vertical-align: middle;
 }
 
 h2, p, .todo {
@@ -73,6 +146,7 @@ header h2{ /* Whimsically Creepy*/
     background-color: rgba(43, 12, 43, 0);
     
 }
+
 h1, h2, p, html {
     font-family: Arial, Helvetica, sans-serif;
     color: antiquewhite;
@@ -102,86 +176,40 @@ p {
   margin:0;
 }
 
+
+
+/***** FOOTER *****/
+
+container {
+  margin: 10px;
+}
+
 footer {
-   /* margin-top: 50px;*/
-    background-color: rgba(43, 12, 43 , 0.75);
+  background-color: rgba(43, 12, 43, 0.75);
+  z-index: 10;
+  margin: 0;
+  padding: 0; 
+  width: 100%;
+  position: inherit;
+  border-top: solid 1px #3c1642;
+  display: block;
 }
 
-@font-face {
-    font-family: "wildwood";
-    src: url("https://www.wfonts.com/download/data/2016/03/01/wildwood/JFWilwod.ttf") format("truetype");
-    src: url("../fonts/JFWilwod.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "bosque-encantado";
-    src: url("https://dl.dafont.com/dl/?f=bosque_encantado")
-    src: url("..fonts/BosqueEncantado.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Fredericka the Great';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Fredericka the Great'), local('FrederickatheGreat'), url(https://fonts.gstatic.com/s/frederickathegreat/v9/9Bt33CxNwt7aOctW2xjbCstzwVKsIBVV--Sjxbc.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-  @font-face {
-    font-family: 'Homemade Apple';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(https://fonts.gstatic.com/s/homemadeapple/v10/Qw3EZQFXECDrI2q789EKQZJob0x6XHg.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  }
-
-.title {
-    font-family: "Fredericka the Great", sans-serif;
-    text-align: start;
-    display: block;
-    font-size: 48px;
-    color: #D9043D;
-    padding-left: 30px;
-    padding-top: 8px;
-    background-color: rgba(43, 12, 43 , 0.0);
-}
-
-.subtitle {
-    color: blanchedalmond;
-    font-family: "Homemade Apple", sans-serif;
-    letter-spacing: 1px;
-    font-size: 20px;
-    position: relative;
-    padding-right: 50px;
-    padding-bottom: 10px;
-  margin:0;
-    text-align: right;
-    background-color: rgba(43, 12, 43, 0);
-}
-
-#swiff {
+figure img {
     height: 50px;
     width: 50px;
-    float: left;
-    padding: 1fr;
+    /*float: left;*/
 }
 
 footer span {
-    position: relative;
-    float: left;
-    padding: 10px;
+    position: absolute;
+    padding: 15px;
+    
 }
 
-footer figure {
-  background-color: rgba(43, 12, 43, 0.75);
-  z-index: 10;
-}
+
+
+/***** LINKS *****/
 
 a, a:visited {
     color: antiquewhite;
@@ -197,3 +225,41 @@ a:hover {
   padding-bottom: 50px;
   border-bottom: 2px antique-white;
 }
+
+
+
+/***** FONTS *****/
+
+@font-face {
+    font-family: "wildwood";
+    src: url("https://www.wfonts.com/download/data/2016/03/01/wildwood/JFWilwod.ttf") format("truetype");
+    src: url("../fonts/JFWilwod.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+} /*Wildwood*/
+
+@font-face {
+    font-family: "bosque-encantado";
+    src: url("https://dl.dafont.com/dl/?f=bosque_encantado")
+    src: url("..fonts/BosqueEncantado.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+} /*Bosque*/
+
+@font-face {
+    font-family: 'Fredericka the Great';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Fredericka the Great'), local('FrederickatheGreat'), url(https://fonts.gstatic.com/s/frederickathegreat/v9/9Bt33CxNwt7aOctW2xjbCstzwVKsIBVV--Sjxbc.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  } /*Fredericka the Great*/
+
+@font-face { 
+    font-family: 'Homemade Apple';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(https://fonts.gstatic.com/s/homemadeapple/v10/Qw3EZQFXECDrI2q789EKQZJob0x6XHg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }/*Homemade Apple*/
