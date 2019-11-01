@@ -81,24 +81,24 @@ header {
 
 /***** BODY *****/
 
+
 body {
   background-color: rgba(43, 12, 43 , 0.75);
-  min-width: 1000px;
-  max-width: 1300px;
+  /* max-width: 1300px; */
   top: 14px;
   width: 100%;
   position: relative;
   display: table;
   vertical-align: middle;
-  min-width: 900px;
-  /*max-width: 1000px;*/
+  /* min-width: 900px; */
+  /* max-width: 1000px; */
 
 }
 
 main {
   position: relative;
-    min-width: 970px;
-  max-width: 1300px;
+  /* min-width: 970px; */
+  /* max-width: 1300px; */
 }
 
 html {
@@ -112,7 +112,7 @@ html {
   display: table-cell;
   vertical-align: middle;
   background-color: black;
-  position: absolute;
+  position: relative;
   /*margin: 0;
   padding:0;*/
 }
@@ -125,9 +125,9 @@ html {
 header, footer {
     background-color: #0D0D0D;
     text-align: center;
-    min-width: 500px;
-    align-content: center;
-  vertical-align: middle;
+    /*min-width: 500px;*/
+    /*align-content: center;*/
+  /*vertical-align: middle;*/
 }
 
 h2, p, .todo {
@@ -135,8 +135,8 @@ h2, p, .todo {
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
+    margin: auto;
+    padding: auto;
   }
 
 header h2{ /* Whimsically Creepy*/
@@ -145,7 +145,6 @@ header h2{ /* Whimsically Creepy*/
     position: relative;
     padding-right: 1fr;
     background-color: rgba(43, 12, 43, 0);
-    
 }
 
 h1, h2, p, html {
@@ -177,13 +176,24 @@ p {
   margin:0;
 }
 
+.center {
+  /* text-align: center; */
+  margin: auto;
+  max-width: 900px;
+}
+
 
 
 /***** FOOTER *****/
 
 .edit-by {
-  margin: 10px;
+  margin-left: 50px;
+  float: left;
 }
+
+/* figure {
+
+} */
 
 footer {
   background-color: rgba(30, 10, 30 , 0.9);
@@ -191,7 +201,7 @@ footer {
   margin: 0;
   padding: 0; 
   width: 100%;
-  position: inherit;
+  position: relative;
   border-top: solid 1px #3c1642;
   display: block;
 }
@@ -199,12 +209,13 @@ footer {
 figure img {
     height: 50px;
     width: 50px;
-    margin: 10px;
-    /*float: left;*/
+    margin: 0;
+    padding: 0;
 }
 
 footer span {
-    position: absolute;
+    position: relative;
+    vertical-align: middle;
     padding: 15px;
     
 }
