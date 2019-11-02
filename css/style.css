@@ -168,7 +168,7 @@ h2 {
     padding-left: 50px;
     padding-top: 30px;
     font-family: "Tulpen One", Helvetica, sans-serif;
-  text-transform: uppercase;
+    text-transform: uppercase;
 
 }
 
@@ -248,7 +248,55 @@ ul input {
   margin: 0px 10px;
 }
 
+.submit, .submit-box {
+  position: relative;
+/*  align-self: center;*/
+  margin: 15px 0;
+  text-align: center;
+/*  vertical-align: middle;*/
+}
 
+
+
+/***** IMAGES *****/
+.betty-img, .manda-img {
+  height: auto;
+  max-width:250px;
+  display: block;
+  position: relative;
+}
+
+.betty-img {
+  margin-left: 50px;
+  margin-right: 20px;
+/*  display: block;*/
+  float: left;
+}
+
+.betty-text {
+  text-align: left;
+  padding-left: 10px; 
+}
+
+.manda-img {
+  float: right;
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.manda-text {
+  height: auto;
+}
+
+.about-me {
+  display: block;
+}
+
+.manda, .betty{
+  display: block;
+  width: 900px;
+  min-height: 300px;
+}
 
 /***** FONTS *****/
 
