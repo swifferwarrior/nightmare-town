@@ -132,7 +132,7 @@ header, footer {
 }
 
 h2, p, .todo {
-    margin: 35px 50px;
+    margin: 0px 50px;
 }
 
 html, body {
@@ -166,7 +166,7 @@ h2 {
     background-color: rgba(43, 12, 43 , 0.0);
     margin:0;
     padding-left: 50px;
-    padding-top: 30px;
+    padding-top: 20px;
     font-family: "Tulpen One", Helvetica, sans-serif;
     text-transform: uppercase;
 
@@ -176,7 +176,7 @@ p , .todo{
     font-size: 14px;
     line-height: 1.75em;
     padding: 5px 50px;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin:0;
 }
 
@@ -267,25 +267,15 @@ ul input {
 }
 
 .betty-img {
-  margin-left: 50px;
-  margin-right: 20px;
-/*  display: block;*/
-  float: left;
-}
-
-.betty-text {
-  text-align: left;
-  padding-left: 10px; 
+  margin-right: 50px;
+  margin-left: 20px;
+  float: right;
 }
 
 .manda-img {
-  float: right;
-  margin-left: 20px;
-  margin-right: 50px;
-}
-
-.manda-text {
-  height: auto;
+  float: left;
+  margin-right: 20px;
+  margin-left: 50px;
 }
 
 .about-me {
@@ -296,8 +286,37 @@ ul input {
   display: block;
   width: 900px;
   min-height: 300px;
+  text-align: justify;
 }
 
+.podcast-embed {
+  margin: auto;
+  display: block;
+  position: relative;
+  width: 650px;
+  height: 100px;
+  padding-bottom: 10px;
+  padding-top: 10px
+}
+
+.podcast {
+  border: solid 1px grey;
+  width: 750px;
+  margin: auto;
+}
+
+.podcast a, header h1 a {
+  color: #D9043D;
+}
+
+.podcast a:hover, .title a:hover {
+  color: white;
+}
+
+.merch-list {
+  text-align: center;
+  text-justify: 
+}
 /***** FONTS *****/
 
 @font-face {
