@@ -256,7 +256,9 @@ ul input {
 /*  vertical-align: middle;*/
 }
 
-
+.submit-box {
+  margin-top: 50px;
+}
 
 /***** IMAGES *****/
 .betty-img, .manda-img {
@@ -303,6 +305,7 @@ ul input {
   border: solid 1px grey;
   width: 750px;
   margin: auto;
+  margin-top: 50px;
 }
 
 .podcast a, header h1 a {
