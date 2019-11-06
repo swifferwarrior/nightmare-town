@@ -330,6 +330,10 @@ ul input {
   text-align: justify;
 }
 
+.betty {
+    padding-bottom: 50px;
+}
+
 .podcast-embed {
   margin: auto;
   display: block;
@@ -358,6 +362,12 @@ ul input {
 .merch-list {
   text-align: center;
   text-justify: 
+}
+
+.construction {
+    margin: auto;
+    display: block;
+    
 }
 /***** FONTS *****/
 
