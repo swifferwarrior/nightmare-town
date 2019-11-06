@@ -224,7 +224,17 @@ footer span {
     
 }
 
+.samhain {
+  width: 400px;
+  height: auto;
+  padding: 150px 50px;
+  display: inline-block;
+}
 
+.samhain-podcast h2, .samhain-podcast p {
+  float: right;
+  display: inline;
+}
 
 /***** LINKS *****/
 
