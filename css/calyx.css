@@ -354,10 +354,17 @@ h6 {
     h3, p, a {
         font-size: 2em;
     }
+  
+  p {
+    font-size:1.5em;
+      padding: 0;
+    width: 350px;
+  }
     
     h2 {
         line-height: 2em;
         font-size: 3em;
+        padding-left:0;
     }
     
     nav a {
