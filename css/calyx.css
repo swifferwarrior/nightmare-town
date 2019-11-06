@@ -297,9 +297,9 @@ h6 {
 /* MOBILE CSS STYLES */
 @media only screen and (max-width: 680px) {
   nav {
-    display: block;
-    position: absolute;
-    width: 100%;
+/*    display: block;*/
+/*    position: absolute;*/
+/*    width: 100%;*/
     left: 0;*/
     top: 4.375em;
   }
@@ -326,15 +326,47 @@ h6 {
   
   
   /* Page Container */
+    html {
+        background-image: url(/images/alone.jpg);
+        background-size:cover;
+        background-position: center;
+        width: 100%;
+    }
+    
+    header, footer, main, body {
+        width: 100%;
+        margin: auto;
+    }
+    
   .container {
     padding: 0;
     margin-left: 0.9375em;
     margin-right: 0.9375em;
     max-width: 100%;
   }
+    
+    main {
+        min-width: 300px;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    h3, p, a {
+        font-size: 2em;
+    }
+    
+    h2 {
+        line-height: 2em;
+        font-size: 3em;
+    }
+    
+    nav a {
+        font-size: 1.5em;
+    }
   
   /* Typography */
   html, body {
     font-size: .9em;
+      width: 100%;
   }
 }
