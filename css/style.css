@@ -186,6 +186,45 @@ p , .todo{
   max-width: 900px;
 }
 
+#open-quote, #close-quote {
+  font-size: 3em;
+  font-family: "Fredericka the Great", sans-serif;
+  width: 50px;
+  filter: invert(100%)
+}
+
+#close-quote {
+  float: right;
+}
+
+#story {
+  margin: 0 10px;
+  text-align: justify;
+  line-height: 2em;
+  font-size: 16px;
+  padding: 0 100px;
+}
+
+#story::first-letter {
+  font-family: "Fredericka the Great", Serif;
+  font-size: 3em;
+}
+
+.quote-story {
+  margin: 0 50px;
+  padding: 25px 0 70px 0;
+  background-color:rgba(26, 7, 26, 0.9);
+  position: relative;
+  bottom: 50px;
+  z-index: 0;
+}
+
+.overlap {
+  position: relative;
+  text-shadow: 3px 3px 3px #d191db;
+  z-index: 20;
+}
+
 
 
 /***** FOOTER *****/
