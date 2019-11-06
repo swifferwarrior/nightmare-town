@@ -1,5 +1,5 @@
 /***** NAV/HEADER *****/
-nav {
+.desktop-nav {
     text-transform: uppercase;
     text-align: center;
     vertical-align: center;
@@ -21,6 +21,10 @@ nav {
     top: 0;
     height: 25px;
     z-index: 15;
+}
+
+.mobile-nav {
+  display: hidden;
 }
 
 header {

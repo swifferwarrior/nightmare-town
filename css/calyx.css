@@ -296,12 +296,40 @@ h6 {
 
 /* MOBILE CSS STYLES */
 @media only screen and (max-width: 680px) {
-  nav {
-/*    display: block;*/
+  .desktop-nav{
+    display: none;
+  }
+  
+  .mobile-nav {
+    display: inline-block;
 /*    position: absolute;*/
 /*    width: 100%;*/
     left: 0;*/
     top: 4.375em;
+    position: relative;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+  }
+  
+  .dropdown-content a {
+    color: antiquewhite;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    z-index: 11;
+/*    border: solid 1px antiquewhite;*/
+    margin: 10px;
+    padding: 10px;
+  }
+  
+  .mobile-nav:hover .dropdown-content {
+    display: block;
+    z-index: 11;
+    background-color:rgba(26, 7, 26, 0.9);
   }
   ul.menu {
     display: none;
