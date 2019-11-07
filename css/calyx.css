@@ -323,18 +323,23 @@ h6 {
   .dropdown-content {
     display: none;
     position: absolute;
+    font-size: 1.5em;
     z-index: 1000;
   }
   
   .dropdown-content a {
+    font-family: "Tulpen One";
+    letter-spacing: 6px;
+    font-weight: bold;
+    text-align: center;
     color: antiquewhite;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     z-index: 11;
-/*    border: solid 1px antiquewhite;*/
+    border: dotted 1px antiquewhite;
     margin: 10px;
-    padding: 10px;
+    padding: 10px 50px;
   }
   
   .mobile-nav:hover .dropdown-content {
