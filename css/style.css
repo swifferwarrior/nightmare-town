@@ -177,7 +177,7 @@ h2 {
 
 }
 
-p , .todo{
+p , span, .todo{
     font-size: 14px;
     line-height: 1.75em;
     padding: 5px 50px;
@@ -228,6 +228,12 @@ p , .todo{
   position: relative;
   text-shadow: 3px 3px 3px #d191db;
   z-index: 20;
+}
+
+textarea {
+    background-color: black;
+    color: antiquewhite;
+    padding: 15px;
 }
 
 
