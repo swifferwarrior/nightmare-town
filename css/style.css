@@ -195,7 +195,7 @@ p , span, .todo{
   font-size: 3em;
   font-family: "Fredericka the Great", sans-serif;
   width: 50px;
-  filter: invert(100%)
+  filter: invert(100%);
 }
 
 #close-quote {
@@ -275,6 +275,21 @@ footer span {
 }
 
 
+.social-media {
+    filter: invert(100%);
+    float: right;
+}
+
+.social-media a {
+  padding: 10px;
+}
+
+.social-media a img {
+  width: 40px;
+  height: auto;
+  position: relative;
+  top: 5px;
+}
 
 /***** LINKS *****/
 
