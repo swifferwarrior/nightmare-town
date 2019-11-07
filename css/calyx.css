@@ -316,7 +316,7 @@ h6 {
   }
   
   .subtitle, .subtitle a {
-    font-size: 1em;
+
     text-shadow: black 3px 3px 3px;
   }
   
@@ -393,6 +393,21 @@ h6 {
     padding: 10px;
   }
   
+  .quote-story {
+    margin: 0;
+    padding: 0 0 50px 0;
+  }
+  
+  .quote-story, .overlap, .submit-box, .podcast,.submit-box textarea {
+    width: 100%;
+  }
+  
+  .checkbox {
+    display: inline-block;
+/*    float: left;*/
+  }
+  
+    
   .overlap {
     padding: 0px;
     margin-top: 90px;
@@ -408,6 +423,18 @@ h6 {
     width: 100%;
   }
   
+  .sponsors {
+    font-size: .9em;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px
+  }
+  
+  .submit-box {
+    padding: 0;
+    margin: 50px 0 0 0;
+  }
+  
   /* Page Container */
     html {
         background-image: url(/images/alone.jpg) no-repeat center center fixed;
@@ -420,6 +447,7 @@ h6 {
         vertical-align: middle;
         background-color: black;
         position: relative;
+        max-width: 900px;
       
 /*        height: 1000px;*/
 /*

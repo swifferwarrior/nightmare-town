@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="stylesheet" type="text/css" href="../css/calyx.css">
   
-      <meta name="viewport" content="width=device-width, initial-scale=1.5, maximum-scale=1.0, user-scalable=yes">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
 
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -57,13 +57,21 @@
         </a>
         <h2 class="subtitle">Submit Story</h2>
     </header>
-    <main>
+    <main class="center">
 
         <div name="submit-box" class="submit-box">
             <textarea rows="10" cols="60" maxlength="3000" placeholder="Hello Neighbor! Tell us your story..."
                 name="submit-box"></textarea><br><br>
-            <input type="checkbox" name="permission-podcast" value="Podcast"> <span>Yes, you may use my story in the podcast.</span><br>
-            <input type="checkbox" name="permission-site" value="Site"> <span>Yes, you may use my story on this site.</span><br>
+            <div class="permission">
+              <input type="checkbox" class='checkbox' name="permission-podcast" value="Podcast"> 
+              <span>Yes, you may use my story in the podcast.</span>
+            </div>
+            <br>
+            <div class="permission">
+              <input type="checkbox" class="checkbox" name="permission-site" value="Site"> 
+              <span>Yes, you may use my story on this site.</span>
+            </div>
+            <br>
             <input type="submit" name="submit" class="submit">
         </div>
 
