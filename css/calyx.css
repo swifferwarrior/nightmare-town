@@ -295,7 +295,7 @@ h6 {
 
 
 /* MOBILE CSS STYLES */
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 800px) {
   .desktop-nav{
     display: none;
   }
@@ -307,6 +307,15 @@ h6 {
     left: 0;*/
     top: 4.375em;
     position: relative;
+  }
+  
+  .title {
+    font-size: 3em;
+    margin: 30px 0 0 0;
+  }
+  
+  .subtitle {
+    font-size: 1.1em;
   }
   
   .dropdown-content {
@@ -352,11 +361,23 @@ h6 {
     line-height: 4.375em;
   }
   
+  .dropbtn img{
+    filter: invert(100%);
+    width: 75px;
+/*    height: 50px;*/
+
+}
+  
+  button {
+    background: transparent;
+    border: none;
+    padding: 30px 0 0 30px;
+  }
   
   /* Page Container */
     html {
         background-image: url(/images/alone.jpg);
-        background-size:cover;
+        background-size: cover;
         background-position: center;
         width: 100%;
     }
@@ -364,6 +385,7 @@ h6 {
     header, footer, main, body {
         width: 100%;
         margin: auto;
+        margin-top: 50px;
     }
     
   .container {
@@ -384,9 +406,9 @@ h6 {
     }
   
   p {
-    font-size:1.5em;
-      padding: 0;
-    width: 350px;
+    font-size: 1.5 em;
+    padding: 0px 2em;
+/*    width: 350px;*/
   }
     
     h2 {
@@ -398,6 +420,17 @@ h6 {
     nav a {
         font-size: 1.5em;
     }
+  
+  .edit-by span{
+    display: inline-block;
+    position: absolute;
+    font-size: 1.7em;
+    padding: 0 0 0 15px;
+  }
+  
+  .edit-by a {
+    font-size: 1em;
+  }
   
   /* Typography */
   html, body {
