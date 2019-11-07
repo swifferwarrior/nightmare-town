@@ -312,10 +312,12 @@ h6 {
   .title {
     font-size: 3em;
     margin: 30px 0 0 0;
+    text-shadow: black 3px 3px 3px;
   }
   
   .subtitle {
-    font-size: 1.1em;
+    font-size: 1em;
+    text-shadow: black 3px 3px 3px;
   }
   
   .dropdown-content {
@@ -363,7 +365,7 @@ h6 {
   
   .dropbtn img{
     filter: invert(100%);
-    width: 75px;
+    width: 50px;
 /*    height: 50px;*/
 
 }
@@ -377,7 +379,7 @@ h6 {
   /* Page Container */
     html {
         background-image: url(/images/alone.jpg);
-        background-size: cover;
+        background-size: auto;
         background-position: center;
         width: 100%;
     }
@@ -414,7 +416,7 @@ h6 {
     h2 {
         line-height: 2em;
         font-size: 3em;
-        padding-left:0;
+        padding-left:1.5 em;
     }
     
     nav a {
@@ -422,14 +424,20 @@ h6 {
     }
   
   .edit-by span{
-    display: inline-block;
-    position: absolute;
-    font-size: 1.7em;
-    padding: 0 0 0 15px;
+    display: none;
   }
   
   .edit-by a {
     font-size: 1em;
+  }
+  
+  .edit-by:hover span {
+    display: inline-block;
+    position: absolute;
+    font-size: 1.7em;
+    padding: 0 25px 0 15px;
+    background-color:rgba(26, 7, 26, 0.9); 
+    z-index: 25;
   }
   
   /* Typography */
