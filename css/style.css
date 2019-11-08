@@ -321,11 +321,14 @@ ul input {
 /*  align-self: center;*/
   margin: 15px 0;
   text-align: center;
+
 /*  vertical-align: middle;*/
 }
 
 .submit-box {
   margin-top: 50px;
+  max-width: 100%;
+  min-width: 200px;
 }
 
 /***** IMAGES *****/
@@ -396,6 +399,10 @@ ul input {
 .construction {
     margin: auto;
     display: block;
+}
+
+.alert {
+  display: hidden;
 }
 
 /***** FONTS *****/

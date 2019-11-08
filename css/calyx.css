@@ -1,33 +1,23 @@
 /* RESET CSS */
-/*
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-*/
-/*
 body {
 	line-height: 1;
 }
-*/
-/*
 blockquote, q {
 	quotes: none;
 }
-*/
-/*
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
-*/
-/*
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-*/
 
 /* GENERAL LAYOUT STYLES */
 /*header, footer {
@@ -402,6 +392,11 @@ h6 {
     width: 100%;
   }
   
+  .construction {
+    width: 300px;
+    margin: auto;
+  }
+  
   .checkbox {
     display: inline-block;
 /*    float: left;*/
@@ -435,9 +430,18 @@ h6 {
     margin: 50px 0 0 0;
   }
   
+  .submit-box textarea{
+    font-size: 2em;
+  }
+  
+  .submit-box span {
+    font-size: 1.5em;
+  }
+  
   /* Page Container */
     html {
-        background-image: url(/images/alone.jpg) no-repeat center center fixed;
+/*        background-image: url(/images/alone.jpg) no-repeat center center fixed;*/
+        background-image: none;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
@@ -464,9 +468,10 @@ h6 {
     
   .container {
     padding: 0;
+/*
     margin-left: 0.9375em;
     margin-right: 0.9375em;
-    max-width: 100%;
+*/
   }
     
     main {
@@ -526,6 +531,10 @@ h6 {
     padding: 0 25px 0 15px;
     background-color:rgba(26, 7, 26, 0.9); 
     z-index: 25;
+  }
+  
+  .alert {
+    display: block;
   }
   
   /* Typography */
