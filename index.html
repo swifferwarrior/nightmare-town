@@ -2,74 +2,102 @@
 <html>
 
 <head>
-    <!--Metadata-->
-    <meta charset="utf-8">
+  <!--Metadata-->
+  <meta charset="utf-8">
 
-    <!--Page Title-->
-    <title>NightmareTown</title>
+  <!--Page Title-->
+  <title>NightmareTown</title>
 
-    <!--Reset CSS - Resets browser default styles-->
-    <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
-    <!--Custom Styles-->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
-  
-    <!--Calyx-->
-    <link rel="stylesheet" type="text/css" href="./css/calyx.css">
+  <!--Reset CSS - Resets browser default styles-->
+  <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
+  <!--Custom Styles-->
+  <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-    <!--Fonts
+  <!--Calyx-->
+  <link rel="stylesheet" type="text/css" href="./css/calyx.css">
+
+  <!--Fonts
     <link href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Homemade+Apple&display=swap" rel="stylesheet">-->
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'G-7GKHW8SKZZ');</script>
+    gtag('config', 'G-7GKHW8SKZZ');</script>
 </head>
 
 <body>
-    <nav class='desktop-nav'>
-        <a href="index.html">Home</a> |
-        <a href="./pages/about.html">About</a> |
-        <a href="./pages/podcast.html">Podcast</a> |
-        <a href="./pages/submit-story.html">Submit</a> |
-        <a href="./pages/merch.html">Merch</a>
-    </nav>
-    <nav class='mobile-nav'>
-      <button class='dropbtn'><img src="images/menu.png"></button>
-      <div class='dropdown-content'>
-        <a href="index.html">Home</a> 
-        <a href="./pages/about.html">About</a> 
-        <a href="./pages/podcast.html">Podcast</a> 
-        <a href="./pages/submit-story.html">Submit</a>
-        <a href="./pages/merch.html">Merch</a>
-      </div>
-    </nav>
-  
-    <header class="center">
-        <a href="https://anchor.fm/nightmaretownpodcast">
-        <h1 class="title">NightmareTown</h1>
-        </a>  
-        <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)"><h2 class="subtitle">Whimsically Creepy</h2></a>
-        
-    </header>
-  
-    <main class="center">
-        <h2>News</h2>
-        <p>Hi there! We are your hosts, Betty Boom and Mandamonium. We would like to        welcome you to NightmareTown,
-            a whimsically creepy podcast where each episode we read stories based around a topic that we draw out
-            of a hat. The stories we tell or topics we talk about range from true crime to creepy pastas, paranormal,
-            to horrifying history. It’s different every week, but always chilling. Become a neighbor and join us for
-            some truly scary stories.</p>
-        
-      <h2>Upcoming Shows</h2>
-        <p>Lorem ipsum dolor amet pinterest asymmetrical biodiesel chillwave portland woke vegan live-edge man bun. 8-bit flannel cred, master cleanse single-origin coffee raclette kinfolk truffaut subway tile prism direct trade blog blue bottle retro. Fam squid chillwave. Pok pok food truck mustache, pop-up intelligentsia pug edison bulb chillwave readymade roof party schlitz pork belly asymmetrical chicharrones.</p>
-        <p>Offal pug snackwave, pop-up fixie franzen crucifix cray occupy plaid. Lomo venmo selfies ramps vexillologist raclette cliche actually shabby chic seitan kogi intelligentsia stumptown shaman. Selvage twee vice health goth lumbersexual banh mi. Small batch edison bulb listicle copper mug.</p>
-<!--
+  <nav class='desktop-nav'>
+    <a href="index.html">Home</a> |
+    <a href="./pages/about.html">About</a> |
+    <a href="./pages/podcast.html">Podcast</a> |
+    <a href="./pages/submit-story.html">Submit</a> |
+    <a href="./pages/merch.html">Merch</a>
+  </nav>
+  <nav class='mobile-nav'>
+    <button class='dropbtn'><img src="images/menu.png"></button>
+    <div class='dropdown-content'>
+      <a href="index.html">Home</a>
+      <a href="./pages/about.html">About</a>
+      <a href="./pages/podcast.html">Podcast</a>
+      <a href="./pages/submit-story.html">Submit</a>
+      <a href="./pages/merch.html">Merch</a>
+    </div>
+  </nav>
+
+  <header class="center">
+    <a href="https://anchor.fm/nightmaretownpodcast">
+      <h1 class="title">NightmareTown</h1>
+    </a>
+    <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+      <h2 class="subtitle">Whimsically Creepy</h2>
+    </a>
+
+  </header>
+
+  <main class="center">
+
+    <div id="latest-episode">
+      <h2 id="latest-title">Harvest of Samhain: Pt 3</h2>
+      <audio id="player-bar" src="./audio/harvest-of-samhain-3.mp3" controls></audio>
+    </div>
+
+    <script type="text/javascript">
+      $("#player-bar").hover(function (event) {
+        if (event.type === "mouseenter") {
+          $(this).attr("controls", "");
+        } else if (event.type === "mouseleave") {
+          $(this).removeAttr("controls");
+        }
+      });
+    </script>
+
+    <h2>Hello neighbor!</h2>
+    <p>Hi there! We are your hosts, Betty Boom and Mandamonium. We would like to welcome you to NightmareTown,
+      a whimsically creepy podcast where each episode we read stories based around a topic that we draw out
+      of a hat. The stories we tell or topics we talk about range from true crime to creepy pastas, paranormal,
+      to horrifying history. It’s different every week, but always chilling. Become a neighbor and join us for
+      some truly scary stories.</p>
+
+    <h2>News</h2>
+    <p><strong>11.17.19</strong> &nbsp; | &nbsp; New episode!</p>
+    
+    
+
+    <!-- <h2>Upcoming Shows</h2>
+    <p>Lorem ipsum dolor amet pinterest asymmetrical biodiesel chillwave portland woke vegan live-edge man bun. 8-bit
+      flannel cred, master cleanse single-origin coffee raclette kinfolk truffaut subway tile prism direct trade blog
+      blue bottle retro. Fam squid chillwave. Pok pok food truck mustache, pop-up intelligentsia pug edison bulb
+      chillwave readymade roof party schlitz pork belly asymmetrical chicharrones.</p>
+    <p>Offal pug snackwave, pop-up fixie franzen crucifix cray occupy plaid. Lomo venmo selfies ramps vexillologist
+      raclette cliche actually shabby chic seitan kogi intelligentsia stumptown shaman. Selvage twee vice health goth
+      lumbersexual banh mi. Small batch edison bulb listicle copper mug.</p> -->
+    <!--
         <h2>To Do</h2>
         <div class="todo">
             <ul>
@@ -79,7 +107,7 @@
             </ul>
         </div>
 -->
-<!--
+    <!--
       <script class="alert">
             let beta = '';
         
@@ -89,35 +117,35 @@
             setTimeout(function() {beta.close();}, 5000)
       </script>
 -->
-    </main>
-    <footer>
-      <figure class="edit-by">
-            <img src="./images/swiff.jpg"  width="50px" height="50px">
-            <span>Edited by <a href="https://github.com/swifferwarrior">SwifferWarrior</a> © 2019 </span>
-      </figure>
-      
-      <figure class='social-media'>
-        <a href="mailto: nightmaretown18@gmail.com" title="Email">
-          <img src="images/email.png">
-        </a>
-        
-        <a href="https://www.facebook.com/nightmaretown18/" title="Facebook">
-          <img src='images/facebook.png'>
-        </a>
-        
-        <a href="https://www.instagram.com/nightmaretown18/" title="Instagram">
-          <img src='images/instagram.png'>
-        </a>
-        
-        <a href="https://twitter.com/nightmaretown18" title="Twitter">
-          <img src='images/twitter.png'>
-        </a>
-        
-        <a href="https://www.youtube.com/channel/UC-Tx0f_-SNZr7ADqVE3vbJA" title="YouChoob">
-          <img src='images/youtube.png'>
-        </a>  
-      </figure>
-    </footer>
+  </main>
+  <footer>
+    <figure class="edit-by">
+      <img src="./images/swiff.jpg" width="50px" height="50px">
+      <span>Edited by <a href="https://github.com/swifferwarrior">SwifferWarrior</a> © 2019 </span>
+    </figure>
+
+    <figure class='social-media'>
+      <a href="mailto: nightmaretown18@gmail.com" title="Email">
+        <img src="images/email.png">
+      </a>
+
+      <a href="https://www.facebook.com/nightmaretown18/" title="Facebook">
+        <img src='images/facebook.png'>
+      </a>
+
+      <a href="https://www.instagram.com/nightmaretown18/" title="Instagram">
+        <img src='images/instagram.png'>
+      </a>
+
+      <a href="https://twitter.com/nightmaretown18" title="Twitter">
+        <img src='images/twitter.png'>
+      </a>
+
+      <a href="https://www.youtube.com/channel/UC-Tx0f_-SNZr7ADqVE3vbJA" title="YouChoob">
+        <img src='images/youtube.png'>
+      </a>
+    </figure>
+  </footer>
 </body>
 
 </html>

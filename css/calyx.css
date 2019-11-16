@@ -19,6 +19,7 @@ table {
 	border-spacing: 0;
 }
 
+
 /* GENERAL LAYOUT STYLES */
 /*header, footer {
   padding: 0;
@@ -393,6 +394,7 @@ h6 {
   }
   
   .construction {
+    display: none;
     width: 300px;
     margin: auto;
   }
@@ -440,7 +442,7 @@ h6 {
   
   /* Page Container */
     html {
-/*        background-image: url(/images/alone.jpg) no-repeat center center fixed;*/
+       /* background-image: url(/images/alone.jpg) no-repeat center center fixed; */
         background-image: none;
         -moz-background-size: cover;
         -webkit-background-size: cover;
@@ -465,6 +467,11 @@ h6 {
         margin: auto;
         margin-top: 50px;
     }
+
+    footer {
+      /* position: absolute; */
+      bottom: 0px;
+    }
     
   .container {
     padding: 0;
@@ -476,8 +483,8 @@ h6 {
     
     main {
         min-width: 300px;
-        max-width: 500px;
-        width: 100%;
+        /* max-width: 500px; */
+        /* width: 100%; */
     }
     
     h3, p, a {
@@ -526,15 +533,43 @@ h6 {
   
   .edit-by:hover span {
     display: inline-block;
+    /* display: none; */
     position: absolute;
     font-size: 1.7em;
     padding: 0 25px 0 15px;
     background-color:rgba(26, 7, 26, 0.9); 
     z-index: 25;
   }
+
+  .edit-by, .social-media {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .edit-by {
+    display: inline-block;
+    left: 0px;
+
+  }
+
+  .social-media {
+    display: block;
+    right: 25px;
+  }
   
   .alert {
     display: block;
+  }
+
+  #latest-episode {
+    width: 400px;
+    height: 400px;
+    background-size: 400px;
+  }
+
+  #latest-title {
+    top: 5px;
+    font-size: 2em;
   }
   
   /* Typography */
@@ -542,4 +577,5 @@ h6 {
     font-size: .9em;
       width: 100%;
   }
+
 }

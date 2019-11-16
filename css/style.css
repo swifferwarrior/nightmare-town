@@ -2,7 +2,7 @@
 .desktop-nav {
     text-transform: uppercase;
     text-align: center;
-    vertical-align: center;
+    /* vertical-align: center; */
     font-weight: bold;
     font-size: 18px;
     margin: 0;
@@ -240,6 +240,34 @@ textarea {
 }
 
 
+/***** HOME *****/
+
+#latest-episode {
+  width: 500px;
+  height: 500px;
+  background-image: url('../images/nt-pro-pic.jpg');
+  background-size: 500px;
+  margin: 50px auto;
+  position: relative;
+}
+
+#player-bar {
+  margin: auto;
+  display: block;
+  position: absolute;
+  width: 90%;
+  height: 50px;
+  bottom: 25px;
+  left: 25px;
+}
+
+#latest-title {
+  position: absolute;
+  text-align: center;
+  display: block;
+  bottom: 90px;
+}
+
 
 /***** FOOTER *****/
 
@@ -281,6 +309,7 @@ footer span {
 .social-media {
     filter: invert(100%);
     float: right;
+    display: block;
 }
 
 .social-media a {
@@ -378,6 +407,7 @@ ul input {
 
 .podcast {
   border: solid 1px grey;
+  border-radius: 15px;
   width: 750px;
   margin: auto;
   margin-top: 50px;
@@ -393,7 +423,7 @@ ul input {
 
 .merch-list {
   text-align: center;
-  text-justify: 
+  /* text-justify:  */
 }
 
 .construction {
@@ -452,4 +482,8 @@ ul input {
 
 em {
   font-style: italic;
+}
+
+strong {
+  font-size: 1.3em;
 }
