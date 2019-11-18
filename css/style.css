@@ -305,7 +305,14 @@ footer span {
     
 }
 
+.samhain {
+  width: 400px;
+  height: auto;
+  padding: 150px 50px;
+  display: inline-block;
+}
 
+<<<<<<< HEAD
 .social-media {
     filter: invert(100%);
     float: right;
@@ -321,6 +328,11 @@ footer span {
   height: auto;
   position: relative;
   top: 5px;
+=======
+.samhain-podcast h2, .samhain-podcast p {
+  float: right;
+  display: inline;
+>>>>>>> e37e652b0bf98321eee6416962d9380b22783fad
 }
 
 /***** LINKS *****/
