@@ -286,7 +286,7 @@ h6 {
 
 
 /* MOBILE CSS STYLES */
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 680px) {
   .desktop-nav{
     display: none;
   }
@@ -575,7 +575,12 @@ h6 {
   /* Typography */
   html, body {
     font-size: .9em;
-      width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  * {
+    box-sizing: inherit;
   }
 
 }
