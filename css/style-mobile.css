@@ -160,6 +160,7 @@ table {
       max-width: 100%;
     }
   header {
+    display: none;
     background-size:cover;
     background-image: none;
   }
@@ -170,9 +171,7 @@ table {
         /* max-width: 500px; */
         /* width: 100%; */
     }
-  #player-bar {
-    transform: scale(0.6);
-  }
+
 
   
   
@@ -236,11 +235,16 @@ table {
       background-repeat: no-repeat;
       max-width: 100%;
 /*    height: 100%;*/
+      transform: scale(.75)
     }
     #latest-title {
     top: 5px;
     font-size: 2em;
     }
+    #player-bar {
+/*    transform: scale(0.6);*/
+/*    width: 60%;*/
+  }
   
   /*About*/
     .manda-text, .betty-text, .manda, .betty{
@@ -297,3 +301,31 @@ table {
   }
 }
 
+@media only screen and (max-width: 860px) {
+      div#latest-episode {
+/*      width: auto;*/
+      margin: auto;
+      background-repeat: no-repeat;
+      max-width: 100%;
+/*    height: 100%;*/
+      transform: scale(.5);
+    }
+  
+      html, body {
+    font-size: .9em;
+    width: 100%;
+    }
+  
+  .social-media {
+    transform: scale(.75);
+    margin: auto;
+    float: none;
+    display: block;
+  }
+  
+  .edit-by {
+    display: none;
+  }
+  
+  h3, p, a {}
+}

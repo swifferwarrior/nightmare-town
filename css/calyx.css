@@ -443,10 +443,7 @@ h6 {
   /* Page Container */
     html {
        /* background-image: url(/images/alone.jpg) no-repeat center center fixed; */
-        -moz-background-size: cover;
-        -webkit-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
+
       
 /*        display: table-cell;*/
 /*        vertical-align: middle;*/
@@ -474,8 +471,12 @@ h6 {
     }
   
   body {
-            padding-bottom: 75px;
-            background: url(./images/alone.jpg) center center cover no-repeat fixed;
+      padding-bottom: 75px;
+      background: url(./images/alone.jpg) center center cover no-repeat fixed;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
   }
     
   .container {
