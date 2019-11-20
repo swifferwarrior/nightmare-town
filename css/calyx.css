@@ -443,7 +443,7 @@ h6 {
   /* Page Container */
     html {
        /* background-image: url(/images/alone.jpg) no-repeat center center fixed; */
-        background-image: none;
+        background: url(./images/alone.jpg) center center cover no-repeat fixed;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
