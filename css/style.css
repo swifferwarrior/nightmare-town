@@ -1,3 +1,4 @@
+@-ms-viewport{ width: device-width; }
 /***** NAV/HEADER *****/
 .desktop-nav {
     text-transform: uppercase;

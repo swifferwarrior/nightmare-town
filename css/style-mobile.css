@@ -1,0 +1,299 @@
+/* RESET CSS */
+/*
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*/
+
+
+  /*************************/
+ /*** MOBILE CSS STYLES ***/
+/*************************/
+@media only screen and (max-width: 860px) {
+  header, footer, main, body {
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        margin-top: 50px;
+    }
+  html, body {
+    box-sizing: border-box;
+  }
+
+  /*HTML*/
+    html {
+/*        background-image: url(/images/alone.jpg) no-repeat center center fixed; */
+      background-image: none;
+      
+/*        display: table-cell;*/
+/*        vertical-align: middle;*/
+/*        background-color: black;*/
+/*        padding-bottom: 75px;*/
+/*        position: relative;*/
+/*        max-width: 900px;*/
+      
+/*        height: 1000px;*/
+/*
+        background-position: center;
+        width: 100%;
+        */}
+    h3, p, a {
+        font-size: 2em;
+    }
+    p {
+/*    font-size: 1.5 em;*/
+/*    padding: 0px 2em;*/
+/*    width: 350px;*/
+  }
+    h2 {
+/*        line-height: 2em;*/
+/*        font-size: 3em;*/
+/*        padding-left:1.5 em;*/
+    }
+  
+  
+  /*Body*/
+    body {
+      padding-bottom: 75px;
+      background: url(./images/alone.jpg) center center cover no-repeat fixed;
+      -moz-background-size: cover;
+      -webkit-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+  }
+
+  
+  /*Nav*/
+    .desktop-nav{
+      display: none;
+    }
+    .mobile-nav {
+      display: inline-block;
+  /*    position: absolute;*/
+  /*    width: 100%;*/
+      left: 0;*/
+      top: 4.375em;
+      position: relative;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      font-size: 1.5em;
+      z-index: 1000;
+    }  
+    .dropdown-content a {
+      font-family: "Tulpen One";
+      letter-spacing: 6px;
+      font-weight: bold;
+      text-align: center;
+      color: antiquewhite;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      z-index: 11;
+      border: dotted 1px antiquewhite;
+      margin: 10px;
+      padding: 10px 50px;
+    }  
+    .mobile-nav:hover .dropdown-content {
+      display: block;
+      z-index: 11;
+      background-color:rgba(26, 7, 26, 0.9);
+    }  
+    .dropbtn img{
+      filter: invert(100%);
+      width: 50px;
+  /*    height: 50px;*/
+
+  }  
+    button {
+      background: transparent;
+      border: none;
+      padding: 30px 0 0 30px;
+    }
+    nav a {
+          font-size: 1.5em;
+      }
+  
+  
+  /*Header*/
+  
+    .title {
+      font-size: 2em;
+      margin: 30px 0 0 0;
+      text-shadow: black 3px 3px 3px;
+/*      width: auto;*/
+/*      max-width: 100%;*/
+    }  
+/*
+  .subtitle{
+      width: auto;
+      max-width: 100%;
+  }
+*/
+    .subtitle, .subtitle a {
+
+/*      text-shadow: black 3px 3px 3px;*/
+    }
+    .subtitle a {
+      font-size: 2em;
+    }
+    header, .title, .subtitle {
+      width: auto;
+      max-width: 100%;
+    }
+  header {
+    background-size:cover;
+    background-image: none;
+  }
+
+  /*Main*/
+    main {
+    /*min-width: 300px;*/
+        /* max-width: 500px; */
+        /* width: 100%; */
+    }
+  #player-bar {
+    transform: scale(0.6);
+  }
+
+  
+  
+  /*Footer*/
+    footer {
+        /* position: absolute; */
+        bottom: 0px;
+      }
+    .edit-by span{
+      display: none;
+    }  
+    .edit-by a {
+      font-size: 1em;
+    }  
+    .edit-by:hover span {
+      display: inline-block;
+      /* display: none; */
+      position: absolute;
+      font-size: 1.7em;
+      padding: 0 25px 0 15px;
+      background-color:rgba(26, 7, 26, 0.9); 
+      z-index: 25;
+    }
+    .edit-by, .social-media {
+      position: absolute;
+      bottom: 0;
+
+    }
+    .edit-by {
+      display: inline-block;
+      left: 0px;
+
+    }
+    .social-media {
+      display: block;
+      right: 25px;
+    }
+  
+  
+  /*Typography*/
+    html, body {
+    font-size: .9em;
+    width: 100%;
+    }
+  
+  
+  /*********/  
+ /*CONTENT*/
+/*********/
+  
+  /*Home*/
+    
+/*    #latest-episode {*/
+/*    width: 400px;*/
+/*    height: 400px;*/
+/*    background-size: 400px;*/
+/*    }*/
+    div#latest-episode {
+/*      width: auto;*/
+      margin: auto;
+      background-repeat: no-repeat;
+      max-width: 100%;
+/*    height: 100%;*/
+    }
+    #latest-title {
+    top: 5px;
+    font-size: 2em;
+    }
+  
+  /*About*/
+    .manda-text, .betty-text, .manda, .betty{
+      margin: auto;
+      padding: 0;
+      width: 100%;
+      font-size: 1.2em;
+    }  
+    .manda-text {
+          text-align:start;
+    }  
+    .betty-text {
+      text-align: justify-all;
+    }
+  
+  
+  /*Podcast*/
+    .podcast a {
+    font-size: 1em;
+  }  
+    .podcast {
+    width: 100%;
+  }
+    
+
+  /*Submit*/
+     #story {
+      padding: 10px;
+    }  
+    .quote-story {
+      margin: 0;
+      padding: 0 0 50px 0;
+    }  
+    .quote-story, .overlap, .submit-box, .podcast,.submit-box textarea {
+      width: 100%;
+    }  
+    .submit-box {
+      padding: 0;
+      margin: 50px 0 0 0;
+    }  
+    .submit-box textarea{
+      font-size: 2em;
+    }  
+    .submit-box span {
+      font-size: 1.5em;
+    }
+
+  
+  /*Merch*/
+    .construction {
+    display: none;
+    width: 300px;
+    margin: auto;
+  }
+}
+

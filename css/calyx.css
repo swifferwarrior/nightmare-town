@@ -443,17 +443,17 @@ h6 {
   /* Page Container */
     html {
        /* background-image: url(/images/alone.jpg) no-repeat center center fixed; */
-        background: url(./images/alone.jpg) center center cover no-repeat fixed;
         -moz-background-size: cover;
         -webkit-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
       
-        display: table-cell;
-        vertical-align: middle;
+/*        display: table-cell;*/
+/*        vertical-align: middle;*/
         background-color: black;
-        position: relative;
-        max-width: 900px;
+        padding-bottom: 75px;
+/*        position: relative;*/
+/*        max-width: 900px;*/
       
 /*        height: 1000px;*/
 /*
@@ -472,6 +472,11 @@ h6 {
       /* position: absolute; */
       bottom: 0px;
     }
+  
+  body {
+            padding-bottom: 75px;
+            background: url(./images/alone.jpg) center center cover no-repeat fixed;
+  }
     
   .container {
     padding: 0;
@@ -482,7 +487,7 @@ h6 {
   }
     
     main {
-        min-width: 300px;
+/*        min-width: 300px;*/
         /* max-width: 500px; */
         /* width: 100%; */
     }
@@ -544,6 +549,7 @@ h6 {
   .edit-by, .social-media {
     position: absolute;
     bottom: 0;
+
   }
 
   .edit-by {
@@ -580,7 +586,7 @@ h6 {
   }
   
   * {
-    box-sizing: inherit;
+/*    box-sizing: inherit;*/
   }
 
 }
