@@ -326,10 +326,14 @@ table {
     font-size: 1em;
   }  
     .podcast {
+<<<<<<< HEAD
     width: 95%;
   }
   .podcast iframe {
     width: 72%;
+=======
+    width: 100%;
+>>>>>>> f48c18fcfa97385de038f2114b3b0e0d62c66538
   }
     
 

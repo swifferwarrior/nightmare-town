@@ -8,13 +8,15 @@
     <!--Page Title-->
     <title>About|NightmareTown</title>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--Reset CSS - Resets browser default styles-->
     <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
     <!--Custom Styles-->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/calyx.css">
+    <link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
+<!--    <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <!--    <meta name="viewport" content="width=1000; user-scalable=0;" />-->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
@@ -24,7 +26,17 @@
       gtag('js', new Date());
 
       gtag('config', 'G-7GKHW8SKZZ');
-  </script>
+    </script>
+    <script type="text/javascript">
+      function showNav() {
+        var x = document.getElementById('dropdown-content');
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";        
+        }
+      } 
+    </script>  
 </head>
 <body>
     <nav class='desktop-nav'>
@@ -36,11 +48,23 @@
     </nav>
   
     <nav class='mobile-nav'>
-      <button class='dropbtn'><img src="../images/menu.png"></button>
-      <div class='dropdown-content'>
-        <a href="../index.html">Home</a> 
-        <a href="./about.html">About</a> 
-        <a href="./podcast.html">Podcast</a> 
+      <div id="mobile-logo">    
+        <a href="https://anchor.fm/nightmaretownpodcast">
+          <h1 class="title">NightmareTown</h1>
+        </a>
+        <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+          <h2 class="subtitle">Whimsically Creepy</h2>
+        </a>
+      </div>
+
+
+      <button class='dropbtn' onclick="showNav()">
+        <img src="../images/menu.png" >
+      </button>
+      <div id='dropdown-content'>
+        <a href="../index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./podcast.html">Podcast</a>
         <a href="./submit-story.html">Submit</a>
         <a href="./merch.html">Merch</a>
       </div>

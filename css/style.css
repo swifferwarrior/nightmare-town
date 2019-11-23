@@ -1,3 +1,4 @@
+@-ms-viewport{ width: device-width; }
 /***** NAV/HEADER *****/
 .desktop-nav {
     text-transform: uppercase;
@@ -146,6 +147,7 @@ h2, p, .todo {
 html, body {
     margin: auto;
     padding: auto;
+    width: 100%;
   }
 
 header h2{ /* Whimsically Creepy*/
@@ -243,7 +245,7 @@ textarea {
 /***** HOME *****/
 
 #latest-episode {
-  width: 500px;
+  width: 55.96%;
   height: 500px;
   background-image: url('../images/nt-pro-pic.jpg');
   background-size: 500px;

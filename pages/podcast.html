@@ -12,7 +12,8 @@
   <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
   <!--Custom Styles-->
   <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <link rel="stylesheet" type="text/css" href="../css/calyx.css">
+  <link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
+<!--  <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -24,7 +25,18 @@
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
-    gtag('config', 'G-7GKHW8SKZZ');</script>
+    gtag('config', 'G-7GKHW8SKZZ');
+  </script>
+    <script type="text/javascript">
+      function showNav() {
+        var x = document.getElementById('dropdown-content');
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";        
+        }
+      } 
+    </script>   
 </head>
 
 <body>
@@ -37,14 +49,26 @@
   </nav>
 
   <nav class='mobile-nav'>
-    <button class='dropbtn'><img src="../images/menu.png"></button>
-    <div class='dropdown-content'>
-      <a href="../index.html">Home</a>
-      <a href="./about.html">About</a>
-      <a href="./podcast.html">Podcast</a>
-      <a href="./submit-story.html">Submit</a>
-      <a href="./merch.html">Merch</a>
+    <div id="mobile-logo">    
+      <a href="https://anchor.fm/nightmaretownpodcast">
+        <h1 class="title">NightmareTown</h1>
+      </a>
+      <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+        <h2 class="subtitle">Whimsically Creepy</h2>
+      </a>
     </div>
+
+
+    <button class='dropbtn' onclick="showNav()">
+      <img src="../images/menu.png" >
+    </button>
+      <div id='dropdown-content'>
+        <a href="../index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./podcast.html">Podcast</a>
+        <a href="./submit-story.html">Submit</a>
+        <a href="./merch.html">Merch</a>
+      </div>
   </nav>
 
   <header class="center">
@@ -53,52 +77,53 @@
     </a>
     <h2 class="subtitle">Podcast</h2>
   </header>
-  <div class="podcast">
-    <h2 class="podcast-title">Harvest of Samhain: Pt 3</h2>
-    <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-END-e8tm50/a-a10uj6v"
-      height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
-    <p>Our heroes come to the end of their journey. Will they save the day or die trying?</p>
-    <p>Once again Betty would like to thank Sully from the How Friends Roll podcast for all his advice. Listen to their adventure at https://darkmorepodcasts.com/how-friends-roll.
-        Special thanks to both Mister Monioum and The Boyfriend, without them this DnD game wouldn't have happened.</p>
-    <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
-      make a podcast. ---<br>
-      <strong>Send in a voice message:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
-      <strong>Support this podcast:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
-  </div>
+  <main>
+    <div class="podcast">
+      <h2 class="podcast-title">Harvest of Samhain: Pt 3</h2>
+      <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-END-e8tm50/a-a10uj6v"
+        height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
+      <p>Our heroes come to the end of their journey. Will they save the day or die trying?</p>
+      <p>Once again Betty would like to thank Sully from the How Friends Roll podcast for all his advice. Listen to their adventure at https://darkmorepodcasts.com/how-friends-roll.
+          Special thanks to both Mister Monioum and The Boyfriend, without them this DnD game wouldn't have happened.</p>
+      <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
+        make a podcast. ---<br>
+        <strong>Send in a voice message:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
+        <strong>Support this podcast:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
+    </div>
 
-  <div class="podcast">
-    <h2 class="podcast-title">Harvest of Samhain: Pt 2</h2>
-    <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-Pt-2-e8tlam/a-a10ub7e"
-      height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
-    <p>Rejoin our.... I guess they are suppose to be heroes.. as they continue to search for the missing children of NightmareTown. Will they find them or will they give in to their curiosity? </p>
-    <p>Huge thank you to Sully from the How Friends Roll podcast for all his advice to Betty. Listen to their adventure at https://darkmorepodcasts.com/how-friends-roll.
+    <div class="podcast">
+      <h2 class="podcast-title">Harvest of Samhain: Pt 2</h2>
+      <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-Pt-2-e8tlam/a-a10ub7e"
+        height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
+      <p>Rejoin our.... I guess they are suppose to be heroes.. as they continue to search for the missing children of NightmareTown. Will they find them or will they give in to their curiosity? </p>
+      <p>Huge thank you to Sully from the How Friends Roll podcast for all his advice to Betty. Listen to their adventure at https://darkmorepodcasts.com/how-friends-roll.
 
-        Special thanks to both Mister Monium and The Boyfriend, without them this DnD game wouldn't have happened.</p>
-    <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
-      make a podcast. ---<br>
-      <strong>Send in a voice message:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
-      <strong>Support this podcast:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
-  </div>
+          Special thanks to both Mister Monium and The Boyfriend, without them this DnD game wouldn't have happened.</p>
+      <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
+        make a podcast. ---<br>
+        <strong>Send in a voice message:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
+        <strong>Support this podcast:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
+    </div>
 
-  <div class="podcast">
-    <h2 class="podcast-title">Harvest of Samhain: Pt 1</h2>
-    <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-e8f4b2/a-ave6h3"
-      height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
-    <p>Happy Halloween Neighbors! Betty and Manda are joined for this very special DnD episode by Mister Monium and The
-      Boyfriend. Please excuse any mishaps as this was Betty's first time being a Dungeon Master.</p>
-    <p>Special Thanks to Sully from the How Friends Roll Podcast for helping Betty figure out how to do this.
-      https://darkmorepodcasts.com/how-friends-roll</p>
-    <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
-      make a podcast. ---<br>
-      <strong>Send in a voice message:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
-      <strong>Support this podcast:</strong> <a
-        href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
-  </div>
+    <div class="podcast">
+      <h2 class="podcast-title">Harvest of Samhain: Pt 1</h2>
+      <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-e8f4b2/a-ave6h3"
+        height="100%" width="370px" frameborder="0" scrolling="no" align="center" class="podcast-embed"></iframe>
+      <p>Happy Halloween Neighbors! Betty and Manda are joined for this very special DnD episode by Mister Monium and The
+        Boyfriend. Please excuse any mishaps as this was Betty's first time being a Dungeon Master.</p>
+      <p>Special Thanks to Sully from the How Friends Roll Podcast for helping Betty figure out how to do this.
+        https://darkmorepodcasts.com/how-friends-roll</p>
+      <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
+        make a podcast. ---<br>
+        <strong>Send in a voice message:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
+        <strong>Support this podcast:</strong> <a
+          href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
+    </div>
 
   <br>
   <!-- <p><a href="https://www.buzzsprout.com/blog/podcast-show-notes-html-format">Show notes html format</a></p> -->
