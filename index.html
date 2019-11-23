@@ -1,31 +1,42 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <!--Metadata-->
-  <meta charset="utf-8">
+  <head>
+    <!--Metadata-->
+    <meta charset="utf-8">
 
-  <!--Page Title-->
-  <title>NightmareTown</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Page Title-->
+    <title>NightmareTown</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!--Reset CSS - Resets browser default styles-->
-  <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
-  <!--Custom Styles-->
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <!--Reset CSS - Resets browser default styles-->
+    <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
+    <!--Custom Styles-->
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
 
-  <!--Calyx-->
-  <link rel="stylesheet" type="text/css" href="x./css/calyx.css">
-  <link rel="stylesheet" type="text/css" href="./css/style-mobile.css">
+    <!--Calyx-->
+    <link rel="stylesheet" type="text/css" href="x./css/calyx.css">
+    <link rel="stylesheet" type="text/css" href="./css/style-mobile.css">
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { dataLayer.push(arguments); }
+      gtag('js', new Date());
 
-    gtag('config', 'G-7GKHW8SKZZ');</script>
+      gtag('config', 'G-7GKHW8SKZZ');
+    </script>
+    <script type="text/javascript">
+      function showNav() {
+        var x = document.getElementById('dropdown-content');
+        if (x.style.display === "none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";        
+        }
+      } 
+    </script>
 </head>
 
 <body>
@@ -37,14 +48,27 @@
     <a href="./pages/merch.html">Merch</a>
   </nav>
   <nav class='mobile-nav'>
-    <button class='dropbtn'><img src="images/menu.png"></button>
-    <div class='dropdown-content'>
+    <div id="mobile-logo">    
+      <a href="https://anchor.fm/nightmaretownpodcast">
+        <h1 class="title">NightmareTown</h1>
+      </a>
+      <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+        <h2 class="subtitle">Whimsically Creepy</h2>
+      </a>
+    </div>
+
+
+    <button class='dropbtn' onclick="showNav()">
+      <img src="images/menu.png" >
+    </button>
+    <div id='dropdown-content'>
       <a href="index.html">Home</a>
       <a href="./pages/about.html">About</a>
       <a href="./pages/podcast.html">Podcast</a>
       <a href="./pages/submit-story.html">Submit</a>
       <a href="./pages/merch.html">Merch</a>
     </div>
+
   </nav>
 
   <header class="center">
@@ -59,10 +83,12 @@
 
   <main class="center">
 
+<!--
     <div id="latest-episode">
       <h2 id="latest-title">Harvest of Samhain: Pt 3</h2>
       <audio id="player-bar" src="./audio/harvest-of-samhain-3.mp3" controls></audio>
     </div>
+-->
 
     <script type="text/javascript">
 //      $("#player-bar").hover(function (event) {
@@ -80,9 +106,12 @@
       of a hat. The stories we tell or topics we talk about range from true crime to creepy pastas, paranormal,
       to horrifying history. It’s different every week, but always chilling. Become a neighbor and join us for
       some truly scary stories.</p>
-
-    <h2>News</h2>
-    <p><strong>11.17.19</strong> &nbsp; | &nbsp; New episode!</p>
+    
+    <div class="content" id="news">
+      <h2>News</h2>
+      <p><strong>11.17.19</strong> &nbsp; | &nbsp; New episode!</p>
+    </div>
+    
     
     
 
@@ -114,6 +143,7 @@
             setTimeout(function() {beta.close();}, 5000)
       </script>
 -->
+
   </main>
   <footer>
     <figure class="edit-by">
