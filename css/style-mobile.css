@@ -249,7 +249,8 @@ table {
       background-repeat: no-repeat;
       width: 100%;
       padding: 0;
-      transform: scale(.75)
+      transform: scale(.75);
+      min-width: 360px;
     }
     #latest-title {
     top: 5px;
