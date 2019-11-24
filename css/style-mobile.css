@@ -244,7 +244,7 @@ table {
 /*    background-size: 400px;*/
 /*    }*/
     div#latest-episode {
-      display: none;
+      display: block;
       margin: auto;
       background-repeat: no-repeat;
       width: 100%;
@@ -260,6 +260,10 @@ table {
   }
   #news {
     margin-bottom: 50px;
+  }
+  #latest-episode img {
+    min-width: 360px;
+    max-width: 500px;
   }
   
   /*About*/

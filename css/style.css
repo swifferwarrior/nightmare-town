@@ -248,10 +248,13 @@ textarea {
 #latest-episode {
   width: 55.96%;
   height: 500px;
-  background-image: url('../images/nt-pro-pic.jpg');
+/*  background-image: url('../images/nt-pro-pic.jpg');*/
   background-size: 500px;
   margin: 50px auto;
   position: relative;
+}
+#latest-episode img {
+    width: 100%;
 }
 
 #player-bar {
