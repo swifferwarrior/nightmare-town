@@ -442,6 +442,17 @@ ul input {
   display: hidden;
 }
 
+/***** TRANSITIONS *****/
+a, .social-media img {
+  transition: 0.3s;
+}
+
+
+a:hover, .social-media img:hover {
+  font-size: 1.3em;
+  transform: scale(1.3);
+}
+
 /***** FONTS *****/
 
 @font-face {
