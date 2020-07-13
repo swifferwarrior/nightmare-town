@@ -10,9 +10,10 @@ function podcastFeature(title, url, pic){
     this.pic = pic;
 };
 
-function merch(pic, price, description){
-    this.pic = pic;
+function merch(title, price, pic, description){
+    this.title = title;
     this.price = price;
+    this.pic = pic;
     this.description = description;
 };
 
@@ -54,9 +55,40 @@ function createPodcast(){
 
     console.table(div);
 
-    main.appendChild(div);
+    // main.appendChild(div);
+    document.getElementById('podcast-container').appendChild(div);
 };
 
+function createMerch(){
+    const div = document.createElement('div');
+    const h2 = document.createElement('h2');
+    const img = document.createElement('img');
+    const h3 = document.createElement('h3');
+    const paragraph = document.createElement('p');
+
+    let title = prompt("What's the naem of the item?",'nothing');
+    let cost = prompt('How much will it cost?', '$');
+    let url = prompt("What's the img url?", "nothing");
+    let description = prompt("What's the description?", "nothing");
+
+    let newMerch = new merch(title, cost, url , description);
+
+    div.setAttribute('class', 'merch');
+    h2.setAttribute('class', 'merch-title')
+    h2.innerHTML = newMerch.title;
+    h3.innerHTML = "$" + newMerch.price;
+    img.setAttribute('src', newMerch.pic);
+    paragraph.innerHTML = newMerch.description;
+
+    div.appendChild(h2);
+    div.appendChild(h3);
+    div.appendChild(img);
+    div.appendChild(paragraph);
+
+    document.getElementById('merch-container').appendChild(div);
+}
+
 document.getElementById('make-podcast').addEventListener('click', createPodcast);
+document.getElementById('make-merch').addEventListener('click', createMerch);
 
 
