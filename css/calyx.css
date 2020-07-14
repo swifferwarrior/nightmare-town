@@ -59,7 +59,7 @@ footer {
   left: 0;
   bottom: 0;
   */
-}
+/* } */
 
 /* HEADER LAYOUT STYLES */
 /*.img-brand {
@@ -295,7 +295,7 @@ h6 {
     display: inline-block;
 /*    position: absolute;*/
 /*    width: 100%;*/
-    left: 0;*/
+    left: 0;
     top: 4.375em;
     position: relative;
   }

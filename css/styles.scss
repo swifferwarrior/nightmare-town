@@ -1,4 +1,5 @@
-$desktop: 840px;
+// $navbar: 1000px;
+$desktop: 1000px;
 $colors: (
     purple-dark: rgba(30, 10, 30 , 0.5),
     purple-darker: rgba(10, 7, 26, 0.6),
@@ -7,9 +8,6 @@ $colors: (
     purple-translucent: rgba(43, 12, 43 , 0.5),
     black: #0D0D0D,
     red: #D9043D,
-    // primary:,
-    // accent:,
-    // highlight:
 );
 
 @function color ($color-name){
@@ -29,21 +27,57 @@ $colors: (
 
 html{
     background: url("../images/foggy.jpg") no-repeat center center fixed; /* Stretch to fit */
+    background-size: cover;
+    height: 100%;
 }
 
 body{
     background-color: color(purple-translucent);
+    height: fit-content;
+    padding-bottom: 8px;
+    // height: 100%;
     @include desktop {
-        width: 75%;
+        max-width: 900px;
+        min-width: 840px;
+        // min-width: 840px;
+        // width: 75%;
         margin: auto;
-        // clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
-        .desktop-nav{
-            font-family: "Tulpen One", Arial, Helvetica, sans-serif;
-        }
         .mobile-nav {display: none;}
-    }
+    }   
+    .desktop-nav{display: none;
+        // @include navbar{
+        //     font-size: 1.5em;
+        // }
+        @include desktop{
+            display: block;
+            font-family: "Tulpen One", Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            text-align: center;
+            /* vertical-align: center; */
+            font-weight: bold;
+            font-size: 1.5em;
+            margin: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 100%;
+            background-color: rgba(30, 10, 30 , 0.9);
+            color: antiquewhite;
+            word-spacing: 1.5rem;
+            letter-spacing: 10px;
+            border-bottom: solid 1px #3c1642;
+            box-shadow: 5px grey;
+            position:relative;
+            display: block;
+            top: 0;
+            height: 25px;
+            z-index: 15;
 
-    .desktop-nav{display: none;}
+            a{
+                text-align: center;
+            }
+        }
+
+    }
     .mobile-nav {
         // background-color: rgba(26, 7, 26, 0.9);
         display: block;
@@ -53,6 +87,9 @@ body{
         padding: 0;
         height: 85px;
         box-shadow: antiquewhite -10px 0px 15px;
+        @include desktop{
+            display: none;
+        }
 
         #dropdown-content {
             display: none;
@@ -103,7 +140,12 @@ body{
         font-size: 2.25rem;
         letter-spacing: 0.1rem;
         text-align: center;
-
+        @include desktop {
+            text-align: left;
+            font-size: 2rem;
+            letter-spacing: 0;
+            // font-weight: normal;
+        }
     }
     p{
         color: antiquewhite;
@@ -112,19 +154,18 @@ body{
         line-height: 1.75em;
         text-align: justify;
         text-justify: newspaper;
+        @include desktop{
+            font-size: 1rem;
+        }
     }
     h2, p, .todo {
         padding: 0 30px;
         margin: 25px 0;
+        @include desktop{
+            margin: 15px 0;
+        }
     }
-
-    // .desktop-nav{
-    //     font-family: "Tulpen One", Arial, Helvetica, sans-serif;
-    // }
-    // .mobile-nav {display: none;}
-
     header{
-        // background-position: center top;
         // background-color: color(purple-darkest);
         background-color: color(purple-darker);
         // background-color: rgba(30, 10, 30, 0.5);
@@ -135,10 +176,12 @@ body{
         // box-shadow: whitesmoke 0px 1px 10px;
         // box-shadow: 5px grey;
         z-index: 10;
-    
+        
         @include desktop {
             height: 175px;
-            background-image: url("../images/alone.jpg") repeat=none;
+            background-image: url("../images/alone.jpg");
+            // background-attachment: scroll;
+            background-position: center top;
         }
 
         #logo{
@@ -164,6 +207,11 @@ body{
                 font-size: 1.8em;
                 font-weight: normal;
                 margin-left: 15px;
+                @include desktop{
+                    font-size: 3.5rem;
+                    margin-left: 25px;
+                    margin-bottom: 60px;
+                }
             }
     
             .subtitle{
@@ -175,6 +223,11 @@ body{
                 margin: 0;
                 letter-spacing: 0.1em;
                 text-align: left;
+                @include desktop{
+                    text-align: right;
+                    font-size: 1.5rem;
+                    bottom: 25px;
+                }
             }
     
             // .title{
@@ -212,21 +265,16 @@ body{
             margin: auto;
             // padding: 30px;
             background: url(https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg) no-repeat center center;
+            background-size: cover;
             width: 100%;
             max-width: 360px;
             height: 360px;
             text-align: center;
             text-transform: capitalize;
             @include desktop{
-                #player-bar-mobile{
-                    display: none;
-                }
-                #player-bar{
-                    position: relative;
-                    width: 90%;
-                    height: 25px;
-                    top: 300px;
-                }
+                max-width: 500px;
+                height: 500px;
+                margin: 100px auto;
             }
             #latest-title{
                 position: absolute;
@@ -237,6 +285,10 @@ body{
                 // padding: 0;
                 // margin: 0;;
                 // bottom: 90px;  
+                @include desktop{
+                    bottom: 90px;
+                    font-size: 3rem;
+                }
             }
             img{
                 display: none;
@@ -250,23 +302,57 @@ body{
                 height: 25px;
                 top: 300px;
                 max-width: 365px;
+                @include desktop{
+                    position: relative;
+                    width: 90%;
+                    height: 50px;
+                    top: 425px;
+                    max-width: none;
+                }
             }
         }
     }
-
     footer{
         background-color: color(purple-darker);
         z-index: 10;
         margin: auto;
         padding: 10px 0; 
         width: 100%;
-        height: fit-content;
+        // height: 100%;
+        // height: fit-content;
         position: relative;
+        bottom: 0;
         border-top: solid 1px #3c1642;
         display: block;
+        @include desktop{
+            position: relative;
+            top: 8px;
+            min-height: 50px;
+
+        }
 
         .edit-by{
             display: none;
+                // img {
+                //     height: 50px;
+                //     width: 50px;
+                //     margin: 0;
+                //     padding: 0;
+                // }
+                span {
+                    position: absolute;
+                    vertical-align: middle;
+                    padding: 15px;
+                    color: antiquewhite;
+                }
+            @include desktop{
+                border-top: solid 1px #3c1642;
+                display: inline;
+                img{
+                    margin-left: 25px;
+                }
+
+            }
         }
         
 
@@ -285,8 +371,13 @@ body{
         }
 
         .social-media {
-            @display desktop{
+            @include desktop{
                 float: right;
+
+                img:hover{
+                    font-size: 1.3em;
+                    transform: scale(1.3);
+                }
             }
             filter: invert(100%);
             // display: block;

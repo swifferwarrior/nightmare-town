@@ -6,19 +6,23 @@
 html {
   background: url("../images/foggy.jpg") no-repeat center center fixed;
   /* Stretch to fit */
+  background-size: cover;
+  height: 100%;
 }
 
 body {
   background-color: rgba(43, 12, 43, 0.5);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding-bottom: 8px;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1000px) {
   body {
-    width: 75%;
+    max-width: 900px;
+    min-width: 840px;
     margin: auto;
-  }
-  body .desktop-nav {
-    font-family: "Tulpen One", Arial, Helvetica, sans-serif;
   }
   body .mobile-nav {
     display: none;
@@ -27,6 +31,37 @@ body {
 
 body .desktop-nav {
   display: none;
+}
+
+@media (min-width: 1000px) {
+  body .desktop-nav {
+    display: block;
+    font-family: "Tulpen One", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    /* vertical-align: center; */
+    font-weight: bold;
+    font-size: 1.5em;
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    background-color: rgba(30, 10, 30, 0.9);
+    color: antiquewhite;
+    word-spacing: 1.5rem;
+    letter-spacing: 10px;
+    border-bottom: solid 1px #3c1642;
+    -webkit-box-shadow: 5px grey;
+            box-shadow: 5px grey;
+    position: relative;
+    display: block;
+    top: 0;
+    height: 25px;
+    z-index: 15;
+  }
+  body .desktop-nav a {
+    text-align: center;
+  }
 }
 
 body .mobile-nav {
@@ -38,6 +73,12 @@ body .mobile-nav {
   height: 85px;
   -webkit-box-shadow: antiquewhite -10px 0px 15px;
           box-shadow: antiquewhite -10px 0px 15px;
+}
+
+@media (min-width: 1000px) {
+  body .mobile-nav {
+    display: none;
+  }
 }
 
 body .mobile-nav #dropdown-content {
@@ -92,6 +133,14 @@ body h2 {
   text-align: center;
 }
 
+@media (min-width: 1000px) {
+  body h2 {
+    text-align: left;
+    font-size: 2rem;
+    letter-spacing: 0;
+  }
+}
+
 body p {
   color: antiquewhite;
   font-family: Arial, Helvetica, sans-serif;
@@ -101,9 +150,21 @@ body p {
   text-justify: newspaper;
 }
 
+@media (min-width: 1000px) {
+  body p {
+    font-size: 1rem;
+  }
+}
+
 body h2, body p, body .todo {
   padding: 0 30px;
   margin: 25px 0;
+}
+
+@media (min-width: 1000px) {
+  body h2, body p, body .todo {
+    margin: 15px 0;
+  }
 }
 
 body header {
@@ -115,10 +176,11 @@ body header {
   z-index: 10;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1000px) {
   body header {
     height: 175px;
-    background-image: url("../images/alone.jpg") repeat=none;
+    background-image: url("../images/alone.jpg");
+    background-position: center top;
   }
 }
 
@@ -126,7 +188,7 @@ body header #logo {
   position: relative;
 }
 
-@media (min-width: 840px) {
+@media (min-width: 1000px) {
   body header #logo .title {
     text-align: right;
   }
@@ -151,6 +213,14 @@ body header #logo .title {
   margin-left: 15px;
 }
 
+@media (min-width: 1000px) {
+  body header #logo .title {
+    font-size: 3.5rem;
+    margin-left: 25px;
+    margin-bottom: 60px;
+  }
+}
+
 body header #logo .subtitle {
   color: blanchedalmond;
   font-family: "Homemade Apple", sans-serif;
@@ -160,6 +230,14 @@ body header #logo .subtitle {
   margin: 0;
   letter-spacing: 0.1em;
   text-align: left;
+}
+
+@media (min-width: 1000px) {
+  body header #logo .subtitle {
+    text-align: right;
+    font-size: 1.5rem;
+    bottom: 25px;
+  }
 }
 
 body main {
@@ -176,6 +254,7 @@ body main #latest-episode {
   position: relative;
   margin: auto;
   background: url(https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg) no-repeat center center;
+  background-size: cover;
   width: 100%;
   max-width: 360px;
   height: 360px;
@@ -183,21 +262,24 @@ body main #latest-episode {
   text-transform: capitalize;
 }
 
-@media (min-width: 840px) {
-  body main #latest-episode #player-bar-mobile {
-    display: none;
-  }
-  body main #latest-episode #player-bar {
-    position: relative;
-    width: 90%;
-    height: 25px;
-    top: 300px;
+@media (min-width: 1000px) {
+  body main #latest-episode {
+    max-width: 500px;
+    height: 500px;
+    margin: 100px auto;
   }
 }
 
 body main #latest-episode #latest-title {
   position: absolute;
   margin: auto;
+}
+
+@media (min-width: 1000px) {
+  body main #latest-episode #latest-title {
+    bottom: 90px;
+    font-size: 3rem;
+  }
 }
 
 body main #latest-episode img {
@@ -214,22 +296,55 @@ body main #latest-episode #player-bar {
   max-width: 365px;
 }
 
+@media (min-width: 1000px) {
+  body main #latest-episode #player-bar {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    top: 425px;
+    max-width: none;
+  }
+}
+
 body footer {
   background-color: rgba(10, 7, 26, 0.6);
   z-index: 10;
   margin: auto;
   padding: 10px 0;
   width: 100%;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   position: relative;
+  bottom: 0;
   border-top: solid 1px #3c1642;
   display: block;
 }
 
+@media (min-width: 1000px) {
+  body footer {
+    position: relative;
+    top: 8px;
+    min-height: 50px;
+  }
+}
+
 body footer .edit-by {
   display: none;
+}
+
+body footer .edit-by span {
+  position: absolute;
+  vertical-align: middle;
+  padding: 15px;
+  color: antiquewhite;
+}
+
+@media (min-width: 1000px) {
+  body footer .edit-by {
+    border-top: solid 1px #3c1642;
+    display: inline;
+  }
+  body footer .edit-by img {
+    margin-left: 25px;
+  }
 }
 
 body footer img {
@@ -251,9 +366,14 @@ body footer .social-media {
   text-align: center;
 }
 
-@display desktop {
+@media (min-width: 1000px) {
   body footer .social-media {
     float: right;
+  }
+  body footer .social-media img:hover {
+    font-size: 1.3em;
+    -webkit-transform: scale(1.3);
+            transform: scale(1.3);
   }
 }
 
