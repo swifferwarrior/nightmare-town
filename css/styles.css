@@ -175,8 +175,9 @@ body main #latest-episode {
   display: block;
   position: relative;
   margin: auto;
-  background: url(https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg) no-repeat;
+  background: url(https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg) no-repeat center center;
   width: 100%;
+  max-width: 360px;
   height: 360px;
   text-align: center;
   text-transform: capitalize;
@@ -210,6 +211,7 @@ body main #latest-episode #player-bar {
   width: 90%;
   height: 25px;
   top: 300px;
+  max-width: 365px;
 }
 
 body footer {
