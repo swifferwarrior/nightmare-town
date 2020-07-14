@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html>
 
-  <head>
-    <!--Metadata-->
-    <meta charset="utf-8">
+<head>
+  <!--Metadata-->
+  <meta charset="utf-8">
 
-    <!--Page Title-->
-    <title>NightmareTown</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Page Title-->
+  <title>NightmareTown</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!--Reset CSS - Resets browser default styles-->
-    <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
-    <!--Custom Styles-->
-    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <!--Reset CSS - Resets browser default styles-->
+  <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
+  <!--Custom Styles-->
+  <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
 
-    <!--Calyx-->
-    <link rel="stylesheet" type="text/css" href="x./css/calyx.css">
-    <link rel="stylesheet" type="text/css" href="./css/style-mobile.css">
+  <!--Calyx-->
+  <!-- <link rel="stylesheet" type="text/css" href="x./css/calyx.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="./css/style-mobile.css"> -->
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() { dataLayer.push(arguments); }
-      gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-      gtag('config', 'G-7GKHW8SKZZ');
-    </script>
-    <script type="text/javascript">
-      function showNav() {
-        var x = document.getElementById('dropdown-content');
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";        
-        }
-      } 
-    </script>
+    gtag('config', 'G-7GKHW8SKZZ');
+  </script>
+  <script type="text/javascript">
+    function showNav() {
+      var x = document.getElementById('dropdown-content');
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } 
+  </script>
 </head>
 
 <body>
@@ -47,19 +48,20 @@
     <a href="./pages/submit-story.html">Submit</a> |
     <a href="./pages/merch.html">Merch</a>
   </nav>
+
   <nav class='mobile-nav'>
-    <div id="mobile-logo">    
+    <!-- <div id="mobile-logo">
       <a href="https://anchor.fm/nightmaretownpodcast">
         <h1 class="title">NightmareTown</h1>
       </a>
       <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
         <h2 class="subtitle">Whimsically Creepy</h2>
       </a>
-    </div>
+    </div> -->
 
 
     <button class='dropbtn' onclick="showNav()">
-      <img src="images/menu.png" >
+      <img src="images/menu.png">
     </button>
     <div id='dropdown-content'>
       <a href="index.html">Home</a>
@@ -72,12 +74,14 @@
   </nav>
 
   <header class="center">
-    <a href="https://anchor.fm/nightmaretownpodcast">
-      <h1 class="title">NightmareTown</h1>
-    </a>
-    <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
-      <h2 class="subtitle">Whimsically Creepy</h2>
-    </a>
+    <div id='logo'>
+      <a href="https://anchor.fm/nightmaretownpodcast">
+        <h1 class="title">NightmareTown</h1>
+      </a>
+      <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+        <h2 class="subtitle">Whimsically Creepy</h2>
+      </a>
+    </div>
 
   </header>
 
@@ -86,9 +90,12 @@
     <div id="latest-episode">
       <h2 id="latest-title">Cryptid</h2>
       <!-- <img src="images/nt-pro-pic.jpg"> -->
-      <img src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg">
+      <!-- <img
+        src="https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg"> -->
       <!-- <audio id="player-bar" src="./audio/harvest-of-samhain-3.mp3" controls></audio> -->
-      <audio id="player-bar" src="https://d3ctxlq1ktw2nl.cloudfront.net/staging/2020-6-12/89502909-44100-2-5fb2fb973be01.m4a" controls></audio>
+      <audio id="player-bar"
+        src="https://d3ctxlq1ktw2nl.cloudfront.net/staging/2020-6-12/89502909-44100-2-5fb2fb973be01.m4a"
+        controls></audio>
     </div>
 
     <script type="text/javascript">
@@ -101,21 +108,23 @@
 //      });
     </script>
 
-    <h2>Hello neighbor!</h2>
-    <p>Hi there! We are your hosts, Betty Boom and Mandamonium. We would like to welcome you to NightmareTown,
-      a whimsically creepy podcast where each episode we read stories based around a topic that we draw out
-      of a hat. The stories we tell or topics we talk about range from true crime to creepy pastas, paranormal,
-      to horrifying history. It’s different every week, but always chilling. Become a neighbor and join us for
-      some truly scary stories.</p>
-    
+    <div id="welcome">
+      <h2>Hello neighbor!</h2>
+      <p>Hi there! We are your hosts, Betty Boom and Mandamonium. We would like to welcome you to NightmareTown,
+        a whimsically creepy podcast where each episode we read stories based around a topic that we draw out
+        of a hat. The stories we tell or topics we talk about range from true crime to creepy pastas, paranormal,
+        to horrifying history. It’s different every week, but always chilling. Become a neighbor and join us for
+        some truly scary stories.</p>
+    </div>
+
     <div class="content" id="news">
       <h2>News</h2>
       <p><strong>7.12.20</strong> &nbsp; | &nbsp; New podcast "Cryptid" out now!</p>
       <p><strong>7.13.20</strong> &nbsp; | &nbsp; Merch coming soon!</p>
     </div>
-    
-    
-    
+
+
+
 
     <!-- <h2>Upcoming Shows</h2>
     <p>Lorem ipsum dolor amet pinterest asymmetrical biodiesel chillwave portland woke vegan live-edge man bun. 8-bit
@@ -147,6 +156,7 @@
 -->
 
   </main>
+
   <footer>
     <figure class="edit-by">
       <img src="./images/swiff.jpg" width="50px" height="50px">
@@ -175,6 +185,7 @@
       </a>
     </figure>
   </footer>
+
 </body>
 
 </html>

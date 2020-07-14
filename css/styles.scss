@@ -1,0 +1,347 @@
+$desktop: 840px;
+$colors: (
+    purple-dark: rgba(30, 10, 30 , 0.5),
+    purple-darker: rgba(26, 7, 26, 0.6),
+    purple-darkest: darken(rgba(30, 10, 30 , 0.5)),
+    purple-something: #3c1642,
+    purple-translucent: rgba(43, 12, 43 , 0.5),
+    black: #0D0D0D,
+    red: #D9043D,
+    // primary:,
+    // accent:,
+    // highlight:
+);
+
+@function color ($color-name){
+    @return map-get($colors, $color-name);
+}
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    background: url("../images/foggy.jpg") no-repeat center center fixed; /* Stretch to fit */
+}
+
+body{
+    background-color: color(purple-translucent);
+    @include desktop {
+        width: 75%;
+        margin: auto;
+        // clip-path: polygon(0 0, 75% 0, 55% 100%, 0% 100%);
+        .desktop-nav{
+            font-family: "Tulpen One", Arial, Helvetica, sans-serif;
+        }
+        .mobile-nav {display: none;}
+    }
+
+    .desktop-nav{display: none;}
+    .mobile-nav {
+        // background-color: rgba(26, 7, 26, 0.9);
+        display: block;
+        position: absolute;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: 85px;
+        box-shadow: antiquewhite 0px 2px 10px;
+
+        #dropdown-content {
+            display: none;
+            position: relative;
+            top: 23.5px;
+            font-size: 1.5em;
+            z-index: 1000;
+            background-color:rgba(26, 7, 26, 0.6);
+            box-shadow: antiquewhite 0px 1px 17px;
+
+        a{
+            font-family: "Tulpen One";
+            letter-spacing: 6px;
+            font-weight: bold;
+            text-align: center;
+            color: antiquewhite;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            z-index: 11;
+            background-color:rgba(26, 7, 26, 0.9);
+            margin: 10px;
+            padding: 10px 50px;
+        }
+    }
+    
+    .dropbtn {
+        position: absolute;
+        margin: 0;
+        padding: 0;
+        top: 17.5px;
+        bottom: 17.5px;
+        right: 17.5px;
+        z-index: 1000;
+        background: transparent;
+        border: none;
+
+        img{
+            filter: invert(100%);
+            width: 50px;
+        }  
+    }
+
+    }
+
+
+    h2{
+        color: antiquewhite;
+        font-family: "Tulpen One", Helvetica, sans-serif;
+        font-size: 2.25rem;
+        letter-spacing: 0.1rem;
+        text-align: center;
+
+    }
+    p{
+        color: antiquewhite;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.2rem;
+        line-height: 1.75em;
+        text-align: justify;
+        text-justify: newspaper;
+    }
+
+    h2, p, .todo {
+        padding: 0 30px;
+        margin: 25px 0;
+    }
+
+    // .desktop-nav{
+    //     font-family: "Tulpen One", Arial, Helvetica, sans-serif;
+    // }
+    // .mobile-nav {display: none;}
+
+    header{
+        // background-position: center top;
+        background-color: color(purple-darkest);
+        // background-color: rgba(30, 10, 30, 0.5);
+        width: 100%;
+        display: block;
+        position: relative;
+        padding: 15px;
+        box-shadow: antiquewhite 0px 2px 10px;
+        z-index: 10;
+    
+        @include desktop {
+            height: 175px;
+            background-image: url("../images/alone.jpg") repeat=none;
+        }
+
+        #logo{
+            position: relative;
+            @include desktop{
+                .title{
+                    text-align: right;
+                }
+            }
+            a{
+                color: color(red);
+                // text-transform: ;
+            }
+
+            h1{font-weight: normal;}
+            
+            .title{
+                font-family: "Fredericka the Great", sans-serif;
+                text-align: start;
+                color: color(red);
+                background-color: rgba(43, 12, 43 , 0.0);
+                display: block;
+                font-size: 1.8em;
+                font-weight: normal;
+            }
+    
+            .subtitle{
+                color: blanchedalmond;
+                font-family: "Homemade Apple", sans-serif;
+                text-transform: capitalize;
+                background-color: rgba(43, 12, 43 , 0.0);
+                font-size: 0.7em;
+                margin: 0;
+                letter-spacing: 0.1em;
+                text-align: left;
+            }
+    
+            // .title{
+            //     font-family: "Fredericka the Great", sans-serif;
+            //     text-align: start;
+            //     color: color(red);
+            //     background-color: rgba(43, 12, 43 , 0.0);
+            //     display: block;
+            // }
+    
+            // .subtitle{
+            //     color: blanchedalmond;
+            //     font-family: "Homemade Apple", sans-serif;
+            //     text-align: right;
+            //     text-transform: capitalize;
+            //     background-color: rgba(43, 12, 43 , 0.0);
+    
+            // }
+        }
+
+    }
+
+    main{
+        padding-top: 25px;
+        // h2{
+        // }
+        #welcome, .content{
+            h2{
+                text-transform: uppercase;
+                letter-spacing: 0.15em;
+            }
+        }
+        #latest-episode{
+            display: block;
+            position: relative;
+            margin: auto;
+            // padding: 30px;
+            background: url(https://d3t3ozftmdmh3i.cloudfront.net/production/podcast_uploaded_episode400/2191024/2191024-1594545120483-c1c5c20abac54.jpg) no-repeat;
+            width: 100%;
+            height: 360px;
+            text-align: center;
+            text-transform: capitalize;
+            @include desktop{
+                #player-bar-mobile{
+                    display: none;
+                }
+                #player-bar{
+                    position: relative;
+                    width: 90%;
+                    height: 25px;
+                    top: 300px;
+                }
+            }
+            #latest-title{
+                position: absolute;
+                margin: auto;
+                // position: relative;
+                // text-align: center;
+                // // display: ;
+                // padding: 0;
+                // margin: 0;;
+                // bottom: 90px;  
+            }
+            img{
+                display: none;
+                position: absolute;
+                width: 100%;
+            }
+            #player-bar{
+                // display: block;
+                position: relative;
+                width: 90%;
+                height: 25px;
+                top: 300px;
+            }
+        }
+    }
+
+    footer{
+        background-color: rgba(30, 10, 30 , 0.9);
+        z-index: 10;
+        margin: 0;
+        padding: 0; 
+        width: 100%;
+        position: relative;
+        border-top: solid 1px #3c1642;
+        display: block;
+
+        img {
+            height: 50px;
+            width: 50px;
+            margin: 0;
+            padding: 0;
+        }
+
+        span {
+            position: absolute;
+            vertical-align: middle;
+            padding: 15px;
+            
+        }
+    }
+}
+
+    /***** FONTS *****/
+
+    @font-face {
+        font-family: "wildwood";
+        src: url("https://www.wfonts.com/download/data/2016/03/01/wildwood/JFWilwod.ttf") format("truetype");
+        src: url("../fonts/JFWilwod.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+    } /*Wildwood*/
+
+    @font-face {
+        font-family: "bosque-encantado";
+        src: url("https://dl.dafont.com/dl/?f=bosque_encantado");
+        src: url("..fonts/BosqueEncantado.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;
+    } /*Bosque*/
+
+    @font-face {
+        font-family: 'Fredericka the Great';
+        font-style: normal;
+        font-weight: 400;
+    /*    font-display: swap;*/
+        src: local('Fredericka the Great'), local('FrederickatheGreat'), url(https://fonts.gstatic.com/s/frederickathegreat/v9/9Bt33CxNwt7aOctW2xjbCstzwVKsIBVV--Sjxbc.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    } /*Fredericka the Great*/
+
+    @font-face { 
+        font-family: 'Homemade Apple';
+        font-style: normal;
+        font-weight: 400;
+    /*    font-display: swap;*/
+        src: local('Homemade Apple Regular'), local('HomemadeApple-Regular'), url(https://fonts.gstatic.com/s/homemadeapple/v10/Qw3EZQFXECDrI2q789EKQZJob0x6XHg.woff2) format('woff2');
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }/*Homemade Apple*/
+
+    @font-face {
+    font-family: 'Tulpen One';
+    font-style: normal;
+    font-weight: 400;
+    /*  font-display: swap;*/
+    src: local('Tulpen One'), local('TulpenOne-Regular'), url(https://fonts.gstatic.com/s/tulpenone/v9/dFa6ZfeC474skLgesc0Cajo6_Q.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    } /*Tulpen One*/
+
+em {
+    font-style: italic;
+}
+    
+strong {
+    font-size: 1.1em;
+}
+
+a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+a, .social-media img{
+    transition: 0.3s;
+}
+
+a:hover{
+    font-size: 1.3em;
+    transform: scale(1.3);
+    color: color(red);
+}
