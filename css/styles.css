@@ -36,8 +36,8 @@ body .mobile-nav {
   margin: 0;
   padding: 0;
   height: 85px;
-  -webkit-box-shadow: antiquewhite 0px 2px 10px;
-          box-shadow: antiquewhite 0px 2px 10px;
+  -webkit-box-shadow: antiquewhite -10px 0px 15px;
+          box-shadow: antiquewhite -10px 0px 15px;
 }
 
 body .mobile-nav #dropdown-content {
@@ -107,13 +107,11 @@ body h2, body p, body .todo {
 }
 
 body header {
-  background-color: rgba(26, 7, 26, 0.6);
+  background-color: rgba(10, 7, 26, 0.6);
   width: 100%;
   display: block;
   position: relative;
-  padding: 15px;
-  -webkit-box-shadow: antiquewhite 0px 2px 10px;
-          box-shadow: antiquewhite 0px 2px 10px;
+  padding: 15px 0;
   z-index: 10;
 }
 
@@ -138,6 +136,10 @@ body header #logo a {
   color: #D9043D;
 }
 
+body header #logo h1 {
+  font-weight: normal;
+}
+
 body header #logo .title {
   font-family: "Fredericka the Great", sans-serif;
   text-align: start;
@@ -145,6 +147,8 @@ body header #logo .title {
   background-color: rgba(43, 12, 43, 0);
   display: block;
   font-size: 1.8em;
+  font-weight: normal;
+  margin-left: 15px;
 }
 
 body header #logo .subtitle {
@@ -209,14 +213,21 @@ body main #latest-episode #player-bar {
 }
 
 body footer {
-  background-color: rgba(30, 10, 30, 0.9);
+  background-color: rgba(10, 7, 26, 0.6);
   z-index: 10;
-  margin: 0;
-  padding: 0;
+  margin: auto;
+  padding: 10px 0;
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
   border-top: solid 1px #3c1642;
   display: block;
+}
+
+body footer .edit-by {
+  display: none;
 }
 
 body footer img {
@@ -230,6 +241,29 @@ body footer span {
   position: absolute;
   vertical-align: middle;
   padding: 15px;
+}
+
+body footer .social-media {
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+  text-align: center;
+}
+
+@display desktop {
+  body footer .social-media {
+    float: right;
+  }
+}
+
+body footer .social-media a {
+  padding: 10px;
+}
+
+body footer .social-media a img {
+  width: 40px;
+  height: auto;
+  position: relative;
+  top: 5px;
 }
 
 /***** FONTS *****/
