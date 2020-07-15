@@ -2,191 +2,200 @@
 <html>
 
 <head>
-    <!--Metadata-->
-    <meta charset="utf-8">
+  <!--Metadata-->
+  <meta charset="utf-8">
 
-    <!--Page Title-->
-    <title>Submit|NightmareTown</title>
+  <!--Page Title-->
+  <title>Submit|NightmareTown</title>
 
-    <!--Reset CSS - Resets browser default styles-->
-    <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
-    <!--Custom Styles-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
-<!--    <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
-  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Reset CSS - Resets browser default styles-->
+  <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
+  <!--Custom Styles-->
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style-mobile.css"> -->
+  <!--    <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7GKHW8SKZZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-        gtag('config', 'G-7GKHW8SKZZ');
-    </script>
+    gtag('config', 'G-7GKHW8SKZZ');
+  </script>
 
-    <!-- Random story JS -->
-    <script src="..\js\tales.js"></script>
-    <script type="text/javascript">
-      function showNav() {
-        var x = document.getElementById('dropdown-content');
-        if (x.style.display === "none") {
-          x.style.display = "block";
-        } else {
-          x.style.display = "none";        
-        }
-      } 
-    </script>   
+  <!-- Random story JS -->
+  <script src="..\js\tales.js"></script>
+  <script type="text/javascript">
+    function showNav() {
+      var x = document.getElementById('dropdown-content');
+      if (x.style.display === "none") {
+        x.style.display = "block";
+      } else {
+        x.style.display = "none";
+      }
+    } 
+  </script>
 </head>
 
 <body>
-    <nav class='desktop-nav'>
-        <a href="../index.html">Home</a> |
-        <a href="./about.html">About</a> |
-        <a href="./podcast.html">Podcast</a> |
-        <a href="./submit-story.html">Submit</a> |
-        <a href="./merch.html">Merch</a>
-    </nav>
-  
-    <nav class='mobile-nav'>
-      <div id="mobile-logo">    
+  <nav class='desktop-nav'>
+    <a href="../index.html">Home</a> |
+    <a href="./about.html">About</a> |
+    <a href="./podcast.html">Podcast</a> |
+    <a href="./submit-story.html">Submit</a> |
+    <a href="./merch.html">Merch</a>
+  </nav>
+
+  <nav class='mobile-nav'>
+    <!-- <div id="mobile-logo">    
         <a href="https://anchor.fm/nightmaretownpodcast">
           <h1 class="title">NightmareTown</h1>
         </a>
         <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
           <h2 class="subtitle">Whimsically Creepy</h2>
         </a>
+      </div> -->
+
+
+    <button class='dropbtn' onclick="showNav()">
+      <img src="../images/menu.png">
+    </button>
+    <div id='dropdown-content'>
+      <a href="../index.html">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./podcast.html">Podcast</a>
+      <a href="./submit-story.html">Submit</a>
+      <a href="./merch.html">Merch</a>
+    </div>
+  </nav>
+
+  <header class="center">
+    <div id="logo">
+      <a href="https://anchor.fm/nightmaretownpodcast">
+        <h1 class="title">NightmareTown</h1>
+      </a>
+      <h2 class="subtitle">Submit Story</h2>
+    </div>
+  </header>
+  <main class="center">
+    <hr id="story-buffer">
+    <div name="submit-box" class="submit-box">
+      <textarea rows="10" cols="60" maxlength="3000" placeholder=" Hello Neighbor! Tell us your story..."
+        name="submit-box"></textarea><br><br>
+      <div class="permission">
+        <input type="checkbox" class='checkbox' name="permission-podcast" value="Podcast">
+        <span>Yes, you may use my story in the podcast.</span>
       </div>
-
-
-      <button class='dropbtn' onclick="showNav()">
-        <img src="../images/menu.png" >
-      </button>
-      <div id='dropdown-content'>
-        <a href="../index.html">Home</a>
-        <a href="./about.html">About</a>
-        <a href="./podcast.html">Podcast</a>
-        <a href="./submit-story.html">Submit</a>
-        <a href="./merch.html">Merch</a>
+      <br>
+      <div class="permission">
+        <input type="checkbox" class="checkbox" name="permission-site" value="Site">
+        <span>Yes, you may use my story on this site.</span>
       </div>
-    </nav>
-  
-    <header class="center">
-        <a href="https://anchor.fm/nightmaretownpodcast">
-            <h1 class="title">NightmareTown</h1>
-        </a>
-        <h2 class="subtitle">Submit Story</h2>
-    </header>
-    <main class="center">
+      <br>
 
-        <div name="submit-box" class="submit-box">
-            <textarea rows="10" cols="60" maxlength="3000" placeholder=" Hello Neighbor! Tell us your story..."
-                name="submit-box"></textarea><br><br>
-            <div class="permission">
-              <input type="checkbox" class='checkbox' name="permission-podcast" value="Podcast"> 
-              <span>Yes, you may use my story in the podcast.</span>
-            </div>
-            <br>
-            <div class="permission">
-              <input type="checkbox" class="checkbox" name="permission-site" value="Site"> 
-              <span>Yes, you may use my story on this site.</span>
-            </div>
-            <br>
-            
-            <input type="submit" name="submit" class="submit">
-            <script>
-              const button = document.querySelector('.submit')
-              
-              button.onclick = function() {
-                /*
-                let text = document.querySelector('textarea')
-                let story = ''
-                story += text;
-                
-                function clear() {
-                  text = '';
-                }
-                
-                function prepEmail() {
-                  enter story into desired format
-                }
-                
-                function send() {
-                  send to email
-                }
-                
-                send story to email as:
-                stories
-                
-                
-                */
-              }
-            </script>
-        </div>
+      <input type="submit" name="submit" class="submit">
+      <script>
+        const button = document.querySelector('.submit')
 
-        <h2 align="center" class='overlap' id="overlap">Tales From Neighborhood Watch</h2>
+        button.onclick = function () {
+          /*
+          let text = document.querySelector('textarea')
+          let story = ''
+          story += text;
+          
+          function clear() {
+            text = '';
+          }
+          
+          function prepEmail() {
+            enter story into desired format
+          }
+          
+          function send() {
+            send to email
+          }
+          
+          send story to email as:
+          stories
+          
+          
+          */
+        }
+      </script>
+    </div>
+    <hr>
 
-        <div class="quote-story">
-            <img id="open-quote" src="https://cdn3.iconfinder.com/data/icons/smoothfill-content/30/content_041-open_quote-text-type-editor-512.png" alt="open-quote">
-            <p id='story'></p>
-            <img id="close-quote" src="https://cdn3.iconfinder.com/data/icons/smoothfill-content/30/content_040-close_quote-text-type-editor-512.png" alt="close-quote">
-        </div>
+    <h2 align="center" class='overlap' id="overlap">Tales From Neighborhood Watch</h2>
+    <div class="quote-story">
+      <img id="open-quote"
+        src="https://cdn3.iconfinder.com/data/icons/smoothfill-content/30/content_041-open_quote-text-type-editor-512.png"
+        alt="open-quote">
+      <p id='story'></p>
+      <img id="close-quote"
+        src="https://cdn3.iconfinder.com/data/icons/smoothfill-content/30/content_040-close_quote-text-type-editor-512.png"
+        alt="close-quote">
+    </div>
+    <hr id="story-buffer">
+    <!-- <div id="separator"></div> -->
 
-        <!-- <p align="center">Lorem ipsum Four dollar toast man braid pug art party raw denim. Trust fund direct trade
+    <!-- <p align="center">Lorem ipsum Four dollar toast man braid pug art party raw denim. Trust fund direct trade
             edison bulb, chicharrones wolf godard tumblr narwhal meggings. Authentic flexitarian mumblecore trust fund
             echo park narwhal kogi typewriter locavore succulents health goth godard wayfarers tilde. Tofu you probably
             haven't heard of them small batch cardigan sriracha dreamcatcher. Try-hard wayfarers jean shorts gochujang
             fixie tousled meditation, chillwave next level hot chicken occupy mlkshk seitan 8-bit ramps. Migas whatever
             sartorial kickstarter brunch unicorn helvetica stumptown kombucha keytar put a bird on it sustainable.</p> -->
 
-        <!-- <h2>To Do</h2>
+    <!-- <h2>To Do</h2>
         <div class="todo">
             <ul>
                 <input type="checkbox">Add textbox for submit<br>
                 <input type="checkbox">Possibly add submit stories<br>
             </ul> -->
-        <!-- </div> -->
+    <!-- </div> -->
 
-    </main>
-    <footer>
-        <figure class="edit-by">
-            <img src="../images/swiff.jpg" width="50px" height="50px">
-            <span>Edited by <a href="https://github.com/swifferwarrior">SwifferWarrior</a>
-                © 2019 </span>
-        </figure>
-      
-            <figure class='social-media'>
-        <a href="mailto: nightmaretown18@gmail.com" title="Email">
-          <img src="../images/email.png">
-        </a>
-        
-        <a href="https://www.facebook.com/nightmaretown18/" title="Facebook">
-          <img src='../images/facebook.png'>
-        </a>
-        
-        <a href="https://www.instagram.com/nightmaretown18/" title="Instagram">
-          <img src='../images/instagram.png'>
-        </a>
-        
-        <a href="https://twitter.com/nightmaretown18" title="Twitter">
-          <img src='../images/twitter.png'>
-        </a>
-        
-        <a href="https://www.youtube.com/channel/UC-Tx0f_-SNZr7ADqVE3vbJA" title="YouChoob">
-          <img src='../images/youtube.png'>
-        </a>  
-      </figure>
-    </footer>
+  </main>
+  <footer>
+    <figure class="edit-by">
+      <img src="../images/swiff.jpg" width="50px" height="50px">
+      <span>Edited by <a href="https://github.com/swifferwarrior">SwifferWarrior</a>
+        © 2019 </span>
+    </figure>
 
-    <script type="text/javascript">
-        var random = Math.floor(stories.length * Math.random());
-        var tale = stories[random];
+    <figure class='social-media'>
+      <a href="mailto: nightmaretown18@gmail.com" title="Email">
+        <img src="../images/email.png">
+      </a>
 
-        document.getElementById('story').innerHTML = tale;
-    </script>
+      <a href="https://www.facebook.com/nightmaretown18/" title="Facebook">
+        <img src='../images/facebook.png'>
+      </a>
+
+      <a href="https://www.instagram.com/nightmaretown18/" title="Instagram">
+        <img src='../images/instagram.png'>
+      </a>
+
+      <a href="https://twitter.com/nightmaretown18" title="Twitter">
+        <img src='../images/twitter.png'>
+      </a>
+
+      <a href="https://www.youtube.com/channel/UC-Tx0f_-SNZr7ADqVE3vbJA" title="YouChoob">
+        <img src='../images/youtube.png'>
+      </a>
+    </figure>
+  </footer>
+
+  <script type="text/javascript">
+    var random = Math.floor(stories.length * Math.random());
+    var tale = stories[random];
+
+    document.getElementById('story').innerHTML = tale;
+  </script>
 </body>
 
 </html>

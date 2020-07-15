@@ -3,6 +3,7 @@ $desktop: 1000px;
 $colors: (
     purple-dark: rgba(30, 10, 30 , 0.5),
     purple-darker: rgba(10, 7, 26, 0.6),
+    purple-darkest: rgba(17, 3, 26, 0.95),
     // purple-darkest: darken(rgba(10, 10, 30 , 0.5)),
     purple-something: #3c1642,
     purple-translucent: rgba(43, 12, 43 , 0.5),
@@ -43,6 +44,7 @@ body{
         // width: 75%;
         margin: auto;
         .mobile-nav {display: none;}
+        #story-buffer{display:none;}
     }   
     .desktop-nav{display: none;
         // @include navbar{
@@ -81,12 +83,13 @@ body{
     .mobile-nav {
         // background-color: rgba(26, 7, 26, 0.9);
         display: block;
-        position: absolute;
+        position: fixed;
         width: 100%;
         margin: 0;
         padding: 0;
         height: 85px;
         box-shadow: antiquewhite -10px 0px 15px;
+        z-index: 100;
         @include desktop{
             display: none;
         }
@@ -94,7 +97,7 @@ body{
         #dropdown-content {
             display: none;
             position: relative;
-            top: 23.5px;
+            top: 85px;
             font-size: 1.5em;
             z-index: 1000;
             background-color:rgba(26, 7, 26, 0.6);
@@ -143,7 +146,9 @@ body{
         @include desktop {
             text-align: left;
             font-size: 2rem;
-            letter-spacing: 0;
+            letter-spacing: 0.1;
+            text-transform: uppercase;
+            // letter-spacing: 0.15em;
             // font-weight: normal;
         }
     }
@@ -151,7 +156,7 @@ body{
         color: antiquewhite;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.2rem;
-        line-height: 1.75em;
+        line-height: 1.5em;
         text-align: justify;
         text-justify: newspaper;
         @include desktop{
@@ -163,21 +168,29 @@ body{
         margin: 25px 0;
         @include desktop{
             margin: 15px 0;
+            padding: 0 50px;
         }
+    }
+    hr{
+        border: 2px double antiquewhite;
+        width: 60%;
+        text-align: center;
+        margin: 40px auto;
     }
     header{
         // background-color: color(purple-darkest);
-        background-color: color(purple-darker);
+        background-color: color(purple-darkest);
         // background-color: rgba(30, 10, 30, 0.5);
         width: 100%;
         display: block;
-        position: relative;
+        position: fixed;
         padding: 15px 0;
         // box-shadow: whitesmoke 0px 1px 10px;
         // box-shadow: 5px grey;
-        z-index: 10;
+        z-index: 99;
         
         @include desktop {
+            position: relative;
             height: 175px;
             background-image: url("../images/alone.jpg");
             // background-attachment: scroll;
@@ -251,8 +264,8 @@ body{
     }
     main{
         padding-top: 25px;
-        // h2{
-        // }
+
+        // HOME
         #welcome, .content{
             h2{
                 text-transform: uppercase;
@@ -279,6 +292,8 @@ body{
             #latest-title{
                 position: absolute;
                 margin: auto;
+                text-transform: capitalize;
+                letter-spacing: 0.05em;
                 // position: relative;
                 // text-align: center;
                 // // display: ;
@@ -311,6 +326,230 @@ body{
                 }
             }
         }
+        #news{
+            p{
+                line-height: 1.3em;
+                margin: 10px 0;
+            }
+        }
+        //ABOUT
+        .manda, .betty{
+            @include desktop{
+                display: block;
+                width: 900px;
+                min-height: 300px;
+                text-align: justify;
+                margin: 50px 0;
+            }
+            img{
+                width:100%;
+            }
+            .betty-img, .manda-img {
+                height: auto;
+                max-width:250px;
+                display: block;
+                position: relative;
+              }
+            .manda-img{
+                float: left;
+                margin-right: 20px;
+                margin-left: 50px;
+            }
+            .betty-img{
+                margin-right: 50px;
+                margin-left: 20px;
+                float: right;
+            }
+        }
+
+        //PODCAST
+        .podcast{
+            border: solid 1px grey;
+            // width: 750px;
+            margin: auto;
+            margin-top: 25px;
+            box-shadow: antiquewhite 0 1px 10px;
+            @include desktop{
+                border-radius: 15px;
+                margin: 50px;
+            }
+            h2{
+                max-width: 100%;
+            }
+            p{
+                font-size: 1em;
+                line-height: 1.25em;
+            }
+            .podcast-embed{
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                text-align: left;
+                height: 100px;
+                // display: none;
+                @include desktop{
+                    // max-width: 80%;
+                    margin: auto;
+                    height: 170px;
+                }
+            }
+            #sponsors{
+                .sponsors{
+                    text-align: center;
+                    button{
+                        font-family: "Tulpen One";
+                        background-color: color(black);
+                        border: 1px solid antiquewhite;
+                        box-shadow: antiquewhite 0 1px 5px;
+                        border-radius: 5px;
+                        margin: 5px auto;
+                        width: 75%;
+                        text-align: center;
+                        color: antiquewhite;
+                        padding: 5px;
+                        max-width: 300pxpx;
+                        font-size: 1.5rem;
+                    }
+                    a{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        //SUBMIT
+        ul input {
+            margin: 0px 10px;
+        }
+        .todo {
+            margin: 0;
+            padding-bottom: 50px;
+            border-bottom: 2px antique-white;
+            padding-left: 0;
+        }
+        .submit, .submit-box {
+            position: relative;
+          /*  align-self: center;*/
+            margin: 15px 0;
+            text-align: center;
+        }
+        .submit-box {
+            @include desktop{
+                margin: auto;
+                margin-top: 50px;
+                min-width: 200px;
+                max-width: 52%;
+
+            }
+            textarea{
+                background-color: color(black);
+                color: antiquewhite;
+                width: 99%;
+                font-size: 1.3rem;
+                font-family: "Fredericka the Great";
+            }
+            .permission{
+                color: antiquewhite;
+            }
+            input.checkbox{
+                background-color: color(black);
+            }
+            input.submit{
+                font-family: "Tulpen One";
+                background-color: color(black);
+                border: 1px solid antiquewhite;
+                box-shadow: antiquewhite 0 1px 5px;
+                border-radius: 5px;
+                margin: 5px auto;
+                width: 75%;
+                text-align: center;
+                color: antiquewhite;
+                padding: 5px;
+                max-width: 300pxpx;
+                font-size: 1.5rem;
+            }
+        }
+        .overlap {
+        position: relative;
+        text-shadow: 3px 3px 3px #d191db;
+        z-index: 20;
+        padding: 0;
+        text-align: center;
+        }
+        .quote-story{
+            background-color: color(purple-darker);
+            margin: 0 10px;
+            @include desktop{
+                margin: 0 50px;
+            }
+            #open-quote, #close-quote {
+                font-size: 3em;
+                font-family: "Fredericka the Great", sans-serif;
+                width: 50px;
+                filter: invert(100%);
+            }
+            #story {
+                text-align: justify;
+                // font-size: 16px;
+                @include desktop{
+                    margin: 0 10px;
+                    line-height: 2em;
+                    padding: 0 100px;
+                }
+                &::first-letter{
+                    font-family: "Fredericka the Great", Serif;
+                    font-size: 3em;
+                }
+            }
+            #open-quote{
+                margin-left: 7.5%;
+            }
+            #close-quote {
+                display: inline-block;
+                margin-left: 85%
+                // float: right;
+            // right: 0;
+            // text-align: right;
+            }
+            
+
+        }
+        #story-buffer{
+            height: 50px;
+            border: none;
+        }
+        //MERCH
+        .merch{
+            border: solid 1px grey;
+            border-radius: 15px;
+            width: 40%;
+            margin-top: 50px;
+            margin: 1%;
+          
+            grid-area: merch;
+          }
+          .merch h3{
+            margin: 5px 50px 15px;
+          }
+          
+          .merch img{
+            width: 100%;
+            height: auto;
+          }
+          
+          .merch-list {
+            text-align: center;
+            /* text-justify:  */
+          }
+          
+          #make-merch, #make-podcast{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+          }
+          .construction{
+              width: 100%;
+          }
     }
     footer{
         background-color: color(purple-darker);

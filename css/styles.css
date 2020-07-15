@@ -27,6 +27,9 @@ body {
   body .mobile-nav {
     display: none;
   }
+  body #story-buffer {
+    display: none;
+  }
 }
 
 body .desktop-nav {
@@ -66,13 +69,14 @@ body .desktop-nav {
 
 body .mobile-nav {
   display: block;
-  position: absolute;
+  position: fixed;
   width: 100%;
   margin: 0;
   padding: 0;
   height: 85px;
   -webkit-box-shadow: antiquewhite -10px 0px 15px;
           box-shadow: antiquewhite -10px 0px 15px;
+  z-index: 100;
 }
 
 @media (min-width: 1000px) {
@@ -84,7 +88,7 @@ body .mobile-nav {
 body .mobile-nav #dropdown-content {
   display: none;
   position: relative;
-  top: 23.5px;
+  top: 85px;
   font-size: 1.5em;
   z-index: 1000;
   background-color: rgba(26, 7, 26, 0.6);
@@ -137,7 +141,8 @@ body h2 {
   body h2 {
     text-align: left;
     font-size: 2rem;
-    letter-spacing: 0;
+    letter-spacing: 0.1;
+    text-transform: uppercase;
   }
 }
 
@@ -145,7 +150,7 @@ body p {
   color: antiquewhite;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
-  line-height: 1.75em;
+  line-height: 1.5em;
   text-align: justify;
   text-justify: newspaper;
 }
@@ -164,20 +169,29 @@ body h2, body p, body .todo {
 @media (min-width: 1000px) {
   body h2, body p, body .todo {
     margin: 15px 0;
+    padding: 0 50px;
   }
 }
 
+body hr {
+  border: 2px double antiquewhite;
+  width: 60%;
+  text-align: center;
+  margin: 40px auto;
+}
+
 body header {
-  background-color: rgba(10, 7, 26, 0.6);
+  background-color: rgba(17, 3, 26, 0.95);
   width: 100%;
   display: block;
-  position: relative;
+  position: fixed;
   padding: 15px 0;
-  z-index: 10;
+  z-index: 99;
 }
 
 @media (min-width: 1000px) {
   body header {
+    position: relative;
     height: 175px;
     background-image: url("../images/alone.jpg");
     background-position: center top;
@@ -273,6 +287,8 @@ body main #latest-episode {
 body main #latest-episode #latest-title {
   position: absolute;
   margin: auto;
+  text-transform: capitalize;
+  letter-spacing: 0.05em;
 }
 
 @media (min-width: 1000px) {
@@ -304,6 +320,261 @@ body main #latest-episode #player-bar {
     top: 425px;
     max-width: none;
   }
+}
+
+body main #news p {
+  line-height: 1.3em;
+  margin: 10px 0;
+}
+
+@media (min-width: 1000px) {
+  body main .manda, body main .betty {
+    display: block;
+    width: 900px;
+    min-height: 300px;
+    text-align: justify;
+    margin: 50px 0;
+  }
+}
+
+body main .manda img, body main .betty img {
+  width: 100%;
+}
+
+body main .manda .betty-img, body main .manda .manda-img, body main .betty .betty-img, body main .betty .manda-img {
+  height: auto;
+  max-width: 250px;
+  display: block;
+  position: relative;
+}
+
+body main .manda .manda-img, body main .betty .manda-img {
+  float: left;
+  margin-right: 20px;
+  margin-left: 50px;
+}
+
+body main .manda .betty-img, body main .betty .betty-img {
+  margin-right: 50px;
+  margin-left: 20px;
+  float: right;
+}
+
+body main .podcast {
+  border: solid 1px grey;
+  margin: auto;
+  margin-top: 25px;
+  -webkit-box-shadow: antiquewhite 0 1px 10px;
+          box-shadow: antiquewhite 0 1px 10px;
+}
+
+@media (min-width: 1000px) {
+  body main .podcast {
+    border-radius: 15px;
+    margin: 50px;
+  }
+}
+
+body main .podcast h2 {
+  max-width: 100%;
+}
+
+body main .podcast p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+body main .podcast .podcast-embed {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: left;
+  height: 100px;
+}
+
+@media (min-width: 1000px) {
+  body main .podcast .podcast-embed {
+    margin: auto;
+    height: 170px;
+  }
+}
+
+body main .podcast #sponsors .sponsors {
+  text-align: center;
+}
+
+body main .podcast #sponsors .sponsors button {
+  font-family: "Tulpen One";
+  background-color: #0D0D0D;
+  border: 1px solid antiquewhite;
+  -webkit-box-shadow: antiquewhite 0 1px 5px;
+          box-shadow: antiquewhite 0 1px 5px;
+  border-radius: 5px;
+  margin: 5px auto;
+  width: 75%;
+  text-align: center;
+  color: antiquewhite;
+  padding: 5px;
+  max-width: 300pxpx;
+  font-size: 1.5rem;
+}
+
+body main .podcast #sponsors .sponsors a {
+  width: 100%;
+}
+
+body main ul input {
+  margin: 0px 10px;
+}
+
+body main .todo {
+  margin: 0;
+  padding-bottom: 50px;
+  border-bottom: 2px antique-white;
+  padding-left: 0;
+}
+
+body main .submit, body main .submit-box {
+  position: relative;
+  /*  align-self: center;*/
+  margin: 15px 0;
+  text-align: center;
+}
+
+@media (min-width: 1000px) {
+  body main .submit-box {
+    margin: auto;
+    margin-top: 50px;
+    min-width: 200px;
+    max-width: 52%;
+  }
+}
+
+body main .submit-box textarea {
+  background-color: #0D0D0D;
+  color: antiquewhite;
+  width: 99%;
+  font-size: 1.3rem;
+  font-family: "Fredericka the Great";
+}
+
+body main .submit-box .permission {
+  color: antiquewhite;
+}
+
+body main .submit-box input.checkbox {
+  background-color: #0D0D0D;
+}
+
+body main .submit-box input.submit {
+  font-family: "Tulpen One";
+  background-color: #0D0D0D;
+  border: 1px solid antiquewhite;
+  -webkit-box-shadow: antiquewhite 0 1px 5px;
+          box-shadow: antiquewhite 0 1px 5px;
+  border-radius: 5px;
+  margin: 5px auto;
+  width: 75%;
+  text-align: center;
+  color: antiquewhite;
+  padding: 5px;
+  max-width: 300pxpx;
+  font-size: 1.5rem;
+}
+
+body main .overlap {
+  position: relative;
+  text-shadow: 3px 3px 3px #d191db;
+  z-index: 20;
+  padding: 0;
+  text-align: center;
+}
+
+body main .quote-story {
+  background-color: rgba(10, 7, 26, 0.6);
+  margin: 0 10px;
+}
+
+@media (min-width: 1000px) {
+  body main .quote-story {
+    margin: 0 50px;
+  }
+}
+
+body main .quote-story #open-quote, body main .quote-story #close-quote {
+  font-size: 3em;
+  font-family: "Fredericka the Great", sans-serif;
+  width: 50px;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+body main .quote-story #story {
+  text-align: justify;
+}
+
+@media (min-width: 1000px) {
+  body main .quote-story #story {
+    margin: 0 10px;
+    line-height: 2em;
+    padding: 0 100px;
+  }
+}
+
+body main .quote-story #story::first-letter {
+  font-family: "Fredericka the Great", Serif;
+  font-size: 3em;
+}
+
+body main .quote-story #open-quote {
+  margin-left: 7.5%;
+}
+
+body main .quote-story #close-quote {
+  display: inline-block;
+  margin-left: 85%;
+}
+
+body main #story-buffer {
+  height: 50px;
+  border: none;
+}
+
+body main .merch {
+  border: solid 1px grey;
+  border-radius: 15px;
+  width: 40%;
+  margin-top: 50px;
+  margin: 1%;
+  grid-area: merch;
+}
+
+body main .merch h3 {
+  margin: 5px 50px 15px;
+}
+
+body main .merch img {
+  width: 100%;
+  height: auto;
+}
+
+body main .merch-list {
+  text-align: center;
+  /* text-justify:  */
+}
+
+body main #make-merch, body main #make-podcast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 50px;
+}
+
+body main .construction {
+  width: 100%;
 }
 
 body footer {

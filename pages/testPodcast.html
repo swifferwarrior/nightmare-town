@@ -11,8 +11,9 @@
   <!--Reset CSS - Resets browser default styles-->
   <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
   <!--Custom Styles-->
-  <link rel="stylesheet" type="text/css" href="../css/style.css">
-  <link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
+  <link rel="stylesheet" type="text/css" href="../css/styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../css/style-mobile.css"> -->
 <!--  <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,14 +42,38 @@
 
 <body>
   <nav class='desktop-nav'>
-    <a href="../index.html">Home</a> |
+    <a href="./index.html">Home</a> |
     <a href="./about.html">About</a> |
     <a href="./podcast.html">Podcast</a> |
     <a href="./submit-story.html">Submit</a> |
     <a href="./merch.html">Merch</a>
   </nav>
 
+  <nav class='mobile-nav'>
+    <!-- <div id="mobile-logo">    
+      <a href="https://anchor.fm/nightmaretownpodcast">
+        <h1 class="title">NightmareTown</h1>
+      </a>
+      <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
+        <h2 class="subtitle">Whimsically Creepy</h2>
+      </a>
+    </div> -->
+
+
+    <button class='dropbtn' onclick="showNav()">
+      <img src="../images/menu.png" >
+    </button>
+      <div id='dropdown-content'>
+        <a href="./index.html">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./podcast.html">Podcast</a>
+        <a href="./submit-story.html">Submit</a>
+        <a href="./merch.html">Merch</a>
+      </div>
+  </nav>
+
 <main id="main">
+  <hr id="story-buffer">
     <div id="podcast-container"><div class="podcast">
     <h2 class="podcast-title">Harvest of Samhain: Pt 3</h2>
     <iframe src="https://anchor.fm/nightmaretownpodcast/embed/episodes/Harvest-of-Samhain-DnD-END-e8tm50/a-a10uj6v"
@@ -57,13 +82,20 @@
     <p>Once again Betty would like to thank Sully from the How Friends Roll podcast for all his advice. Listen to their adventure at https://darkmorepodcasts.com/how-friends-roll.
     Special thanks to both Mister Monioum and The Boyfriend, without them this DnD game wouldn't have happened.</p>
     <div id='sponsors'>
-    <p class="sponsors">--- This episode is sponsored by <a href="https://anchor.fm/app">Anchor</a>: The easiest way to
-    make a podcast. ---<br>
-    <strong>Send in a voice message:</strong> <a
-    href="https://anchor.fm/nightmaretownpodcast/message">https://anchor.fm/nightmaretownpodcast/message</a><br>
-    <strong>Support this podcast:</strong> <a
-    href="https://anchor.fm/nightmaretownpodcast/support">https://anchor.fm/nightmaretownpodcast/support</a></p>
-    </div></div>
+      <p class="sponsors">--------- <br> This episode is sponsored by <br><a href="https://anchor.fm/app">Anchor</a>: The easiest way to
+        make a podcast.<br>
+        <button>
+          <strong>Send in a voice message:</strong>
+          <a href="https://anchor.fm/nightmaretownpodcast/message"></a>
+        </button>
+          <br>
+        <button>
+          <strong>Support this podcast:</strong> 
+          <a href="https://anchor.fm/nightmaretownpodcast/support"></a>
+        </button>
+      </p>
+    </div>
+  </div>
     </div>
     <div class="center-button"><button id="make-podcast" >Make new Podcast</button></div>
       <div id="merch-container">

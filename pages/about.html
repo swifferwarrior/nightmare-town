@@ -12,8 +12,9 @@
     <!--Reset CSS - Resets browser default styles-->
     <!--<link rel="stylesheet" type="text/css" href="/css/reset.css">-->
     <!--Custom Styles-->
-    <link rel="stylesheet" type="text/css" href="../css/style.css">
-    <link rel="stylesheet" type="text/css" href="../css/style-mobile.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../css/style-mobile.css"> -->
 <!--    <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
 
 
@@ -38,6 +39,7 @@
       } 
     </script>  
 </head>
+
 <body>
     <nav class='desktop-nav'>
         <a href="../index.html">Home</a> |
@@ -46,15 +48,16 @@
         <a href="./submit-story.html">Submit</a> |
         <a href="./merch.html">Merch</a>
     </nav>
+
     <nav class='mobile-nav'>
-      <div id="mobile-logo">    
+      <!-- <div id="mobile-logo">    
         <a href="https://anchor.fm/nightmaretownpodcast">
           <h1 class="title">NightmareTown</h1>
         </a>
         <a href="/pages/geocities.html" title="༼ つ ◕_◕ ༽つ < Dont click!)">
           <h2 class="subtitle">Whimsically Creepy</h2>
         </a>
-      </div>
+      </div> -->
 
 
       <button class='dropbtn' onclick="showNav()">
@@ -70,13 +73,16 @@
     </nav>
   
     <header class="center">
-        <a href="https://anchor.fm/nightmaretownpodcast">
-        <h1 class="title">NightmareTown</h1>
-        </a>  
-        <h2 class="subtitle">About</h2>
+        <div id="logo">
+          <a href="https://anchor.fm/nightmaretownpodcast">
+          <h1 class="title">NightmareTown</h1>
+          </a>  
+          <h2 class="subtitle">About</h2>
+        </div>
     </header>
   
     <main class="center">
+      <hr id="story-buffer">
         <h2>About</h2>
 
         <p>Hi there! We are your hosts, Betty Boom and Mandamonium. We would like to welcome you to NightmareTown,
