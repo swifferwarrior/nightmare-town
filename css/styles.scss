@@ -519,6 +519,14 @@ body{
             border: none;
         }
         //MERCH
+        .construction{
+            width: 100%;
+        }
+        #merch-title{
+            @include desktop{
+                text-align: center;
+            }
+        }
         .merch{
             border: solid 1px grey;
             border-radius: 15px;
@@ -546,9 +554,6 @@ body{
             display: flex;
             justify-content: center;
             margin-top: 50px;
-          }
-          .construction{
-              width: 100%;
           }
     }
     footer{
