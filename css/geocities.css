@@ -15,6 +15,14 @@ a, p, span {
     font-size: 18px;
 }
 
+h1{
+    font-family: "Papyrus";
+}
+
+h2{
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+
 a:visited {
     color: white;
 }
@@ -35,4 +43,9 @@ footer {
 
 .spike {
     float: right;
+}
+.skeletons{
+    /* display: inline; */
+    /* position: relative; */
+    margin: 0 125px;
 }

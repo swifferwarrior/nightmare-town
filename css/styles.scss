@@ -535,26 +535,33 @@ body{
             margin: 1%;
           
             grid-area: merch;
-          }
-          .merch h3{
-            margin: 5px 50px 15px;
-          }
-          
-          .merch img{
-            width: 100%;
-            height: auto;
-          }
-          
-          .merch-list {
-            text-align: center;
-            /* text-justify:  */
-          }
-          
-          #make-merch, #make-podcast{
-            display: flex;
-            justify-content: center;
-            margin-top: 50px;
-          }
+        }
+        .merch h3{
+        margin: 5px 50px 15px;
+        }
+        
+        .merch img{
+        width: 100%;
+        height: auto;
+        }
+        
+        .merch-list {
+        text-align: center;
+        /* text-justify:  */
+        }
+        
+        #make-merch, #make-podcast{
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        }
+        //GEOCITIES
+        .skeletons{
+            display: inline;
+            position: relative;
+            margin: 150px;
+            width: 50%;
+        }
     }
     footer{
         background-color: color(purple-darker);
@@ -589,6 +596,7 @@ body{
                     padding: 15px;
                     color: antiquewhite;
                 }
+
             @include desktop{
                 border-top: solid 1px #3c1642;
                 display: inline;

@@ -583,6 +583,13 @@ body main #make-merch, body main #make-podcast {
   margin-top: 50px;
 }
 
+body main .skeletons {
+  display: inline;
+  position: relative;
+  margin: 150px;
+  width: 50%;
+}
+
 body footer {
   background-color: rgba(10, 7, 26, 0.6);
   z-index: 10;
