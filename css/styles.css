@@ -544,6 +544,16 @@ body main .construction {
   width: 100%;
 }
 
+body main #paypal-label {
+  margin: 80px auto 10px auto;
+}
+
+@media (min-width: 1000px) {
+  body main #paypal-label {
+    margin: 25px auto;
+  }
+}
+
 body main .merch {
   position: relative;
   border: solid 1px grey;
@@ -569,8 +579,10 @@ body main .merch .merch-title {
 
 @media (min-width: 1000px) {
   body main .merch .merch-title {
-    margin: 20px;
+    margin: 20px 50px 10px 50px;
+    padding: 0;
     display: block;
+    font-size: 2.5em;
   }
 }
 
@@ -584,8 +596,8 @@ body main .merch h3 {
 
 @media (min-width: 1000px) {
   body main .merch h3 {
-    margin: 5px 50px 15px;
-    padding: none;
+    margin: 10px 50px;
+    padding: 0;
     float: none;
   }
 }

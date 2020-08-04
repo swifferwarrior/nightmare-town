@@ -264,7 +264,6 @@ body{
     }
     main{
         padding-top: 25px;
-
         // HOME
         #welcome, .content{
             h2{
@@ -522,6 +521,14 @@ body{
         .construction{
             width: 100%;
         }
+        #paypal-label{
+            // display: block;
+            margin: 80px auto 10px auto;
+            @include desktop{
+                margin: 25px auto;
+            // margin-top: 80px;
+            }
+        }
         .merch{
             position: relative;
             border: solid 1px grey;
@@ -539,9 +546,11 @@ body{
                 display: inline-block;
                 margin: 0.2em;
                 @include desktop{
-                    margin:  20px;
+                    margin:  20px 50px 10px 50px;
+                    padding: 0;
                     // text-align: center;
                     display: block;
+                    font-size: 2.5em;
                 }
             }
             h3{
@@ -551,8 +560,9 @@ body{
                 font-size: 1.7em;
                 padding: 5px;
                 @include desktop{
-                    margin: 5px 50px 15px;
-                    padding: none;
+                    // margin: 5px 50px 15px;
+                    margin: 10px 50px;
+                    padding: 0;
                     float: none;
                 }
             }
