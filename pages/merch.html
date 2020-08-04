@@ -16,7 +16,9 @@
   <!-- <link rel="stylesheet" type="text/css" href="../css/style-mobile.css"> -->
   <!--    <link rel="stylesheet" type="text/css" href="../css/calyx.css">-->
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Ensures optimal rendering on mobile devices. -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Optimal Internet Explorer compatibility -->
 
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,6 +40,7 @@
       }
     } 
   </script>
+
 </head>
 
 <body>
@@ -100,24 +103,90 @@
     </table>
     <!-- PayPal Logo -->
     <!-- <h2>Secure Payments by  </h2> -->
-    <div class="merch">
-      <h2 class="merch-title">Bigfoot Pin</h2>
-      <h3>$15</h3>
-      <img src="../images/bigfoot-landscape.jpg">
-      <p>1.25 inch soft enamel pin. <br>
-         "Was it Bigfoot?"</p>
-      <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" onclick="window.open('https://www.paypal.com/cgi-bin/webscr', 
-        'newwindow', 
-        'width=700,height=500'); 
-        return false;">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="REU3EQRJM2F66">
-        <input type="image" src="../images/add-to-cart.png" border="0" name="submit"
-          alt="PayPal - The safer, easier way to pay online!" width="60%" height="auto" id="add-to-cart">
-
-        <!-- <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
-      </form>
+    <script
+    src="https://www.paypal.com/sdk/js?client-id=AQzucLDEqpsGhQ2-AY8Px6M5e8sUS_-LbEEifh8F7etvuik_m-73SkUmPEhsEeQRdxyMMGtHHbB1TgYT"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+    </script>
+    <div class="store-container">
+      <div class="merch">
+        <h2 class="merch-title">Bigfoot Pin</h2>
+        <h3>$15</h3>
+        <img src="../images/bigfoot-landscape.jpg">
+        <p>1.25 inch soft enamel pin. <br>
+          "Was it Bigfoot?"</p>
+          <div id="paypal-button-container"></div>
+        <!-- <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post" onclick="window.open('https://www.paypal.com/cgi-bin/webscr', 
+          'newwindow', 
+          'width=700,height=500'); 
+          return false;">
+          <input type="hidden" name="cmd" value="_s-xclick">
+          <input type="hidden" name="hosted_button_id" value="REU3EQRJM2F66">
+          <input type="image" src="../images/add-to-cart.png" border="0" name="submit"
+            alt="PayPal - The safer, easier way to pay online!" width="60%" height="auto" id="add-to-cart">
+  
+          <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1"> -->
+        <!-- </form>
+        <div id="paypal-button-container"></div>
+  <script src="https://www.paypal.com/sdk/js?client-id=ATJ-R96qHUWMQktdGiC5O7uRAi1m6bHRQkAWUgAohFAFtT9GUZfXx6SWipYcKTo32fseOR8C5__zV8Yb&currency=USD" data-sdk-integration-source="button-factory"></script> --> -->
+      </div>
+  
+      <div class="merch"><h2 class="merch-title"><br> </h2><h3></h3><img src="../images/more-coming-soon.png"><p><br><br></p><div id="paypal-button-container"></div></div>
     </div>
+
+
+
+    <!-- <script src="https://www.paypal.com/sdk/js?client-id=SB_CLIENT_ID"> // Required. Replace SB_CLIENT_ID with your sandbox client ID.
+    </script> -->
+
+
+
+    <!-- <script>
+      paypal.Buttons().render('#paypal-button-container');
+    // This function displays Smart Payment Buttons on your web page.
+    </script> -->
+
+
+<!-- <script>
+      paypal.Buttons({
+        createOrder: function (data, actions) {
+          // This function sets up the details of the transaction, including the amount and line item details.
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '0.01'
+              }
+            }]
+          });
+        }
+      }).render('#paypal-button-container');
+    </script> -->
+
+
+
+
+
+    <!-- <script>
+      paypal.Buttons({
+        createOrder: function(data, actions) {
+          // This function sets up the details of the transaction, including the amount and line item details.
+          return actions.order.create({
+            purchase_units: [{
+              amount: {
+                value: '0.01'
+              }
+            }]
+          });
+        },
+        onApprove: function(data, actions) {
+          // This function captures the funds from the transaction.
+          return actions.order.capture().then(function(details) {
+            // This function shows a transaction success message to your buyer.
+            alert('Transaction completed by ' + details.payer.name.given_name);
+          });
+        }
+      }).render('#paypal-button-container');
+      //This function displays Smart Payment Buttons on your web page.
+    </script> -->
+
     <br>
     <!--<hr id="story-buffer">
         <h2 align="center" id="merch-title"><br><br>Coming soon...</h2><br><br>
@@ -132,6 +201,63 @@
                 <input type="checkbox">Sponsors<br>
             </ul> -->
     <!--      </div>-->
+    <script src="https://www.paypal.com/sdk/js?client-id=ATJ-R96qHUWMQktdGiC5O7uRAi1m6bHRQkAWUgAohFAFtT9GUZfXx6SWipYcKTo32fseOR8C5__zV8Yb&currency=USD" data-sdk-integration-source="button-factory"></script>
+    
+    <script id="paypal-mobile">
+      paypal.Buttons({
+          style: {
+              shape: 'rect',
+              color: 'black',
+              layout: 'horizontal',
+              label: 'paypal',
+              
+          },
+          createOrder: function(data, actions) {
+              return actions.order.create({
+                  purchase_units: [{
+                      amount: {
+                          value: '15'
+                      }
+                  }]
+              });
+          },
+          onApprove: function(data, actions) {
+              return actions.order.capture().then(function(details) {
+                  alert('Transaction completed by ' + details.payer.name.given_name + '!');
+              });
+          }
+      }).render('#paypal-button-container');
+    </script>
+
+<div id="paypal-button-container"></div>
+
+
+<!-- <script id="paypal-desktop">
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'black',
+          layout: 'vertical',
+          label: 'paypal',
+          
+      },
+      createOrder: function(data, actions) {
+          return actions.order.create({
+              purchase_units: [{
+                  amount: {
+                      value: '15'
+                  }
+              }]
+          });
+      },
+      onApprove: function(data, actions) {
+          return actions.order.capture().then(function(details) {
+              alert('Transaction completed by ' + details.payer.name.given_name + '!');
+          });
+      }
+  }).render('#paypal-button-container');
+</script> -->
+
   </main>
   <footer>
     <figure class="edit-by">
