@@ -83,9 +83,30 @@
       <h2 class="subtitle">Submit Story</h2>
     </div>
   </header>
-  <main class="center">
+  <main id="submit-main" class="center">
     <hr id="story-buffer">
-    <div name="submit-box" class="submit-box">
+    <!-- <form action="../submissions/formdata.txt" method="POST"> -->
+      <form id="form">
+      <ul>
+        <li>
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="user_name">
+        </li>
+        <li>
+          <label for="mail">E-mail:</label>
+          <input type="email" id="mail" name="user_email">
+        </li>
+        <li>
+          <label for="submit-story">Story:</label>
+          <textarea id="submit-story" rows="10" cols="60" maxlength="3000" placeholder=" Hello Neighbor! Tell us your story..."
+          name="submit_box"></textarea>
+        </li>
+        <li class="button">
+          <button type="submit" id="btnSubmit">Submit</button>
+        </li>
+      </ul>
+    </form>
+    <!-- <div name="submit-box" class="submit-box">
       <textarea rows="10" cols="60" maxlength="3000" placeholder=" Hello Neighbor! Tell us your story..."
         name="submit-box"></textarea><br><br>
       <div class="permission">
@@ -128,8 +149,9 @@
           */
         }
       </script>
-    </div>
+    </div> -->
     <hr>
+    <div id="divResult"></div>
 
     <h2 align="center" class='overlap' id="overlap">Tales From Neighborhood Watch</h2>
     <div class="quote-story">
@@ -196,6 +218,45 @@
 
     document.getElementById('story').innerHTML = tale;
   </script>
+  <script type="text/javascript" src="../js/rest.js"></script>
 </body>
+<!-- <script>
+  const fs = require('fs') 
+  let saveFile = () => {
+    
+      // Get the data from each element on the form.
+    const name = document.getElementById('name');
+      const email = document.getElementById('mail');
+      const submitStory = document.getElementById('submit-story');
+      
+      // This variable stores all the data.
+      let data = 
+          '\r Name: ' + name.value + ' \r\n ' + 
+          'Email: ' + email.value + ' \r\n ' + 
+          'Message: ' + submitStory.value;
+
+      fs.writeFile('../submissions/formdata.txt', data, (err) =>{
+        if (err) throw err;
+      })
+      // // Convert the text to BLOB.
+      const textToBLOB = new Blob([data], { type: 'text/plain' });
+      const sFileName = 'formData.txt';	   // The file to save the data.
+
+      let newLink = document.createElement("a");
+      newLink.download = sFileName;
+
+      if (window.webkitURL != null) {
+          newLink.href = window.webkitURL.createObjectURL(textToBLOB);
+      }
+      else {
+          newLink.href = window.URL.createObjectURL(textToBLOB);
+          newLink.style.display = "none";
+          document.body.appendChild(newLink);
+      }
+
+      newLink.click(); 
+  }
+</script> -->
+
 
 </html>

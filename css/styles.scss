@@ -522,28 +522,64 @@ body{
         .construction{
             width: 100%;
         }
-        #merch-title{
-            @include desktop{
-                text-align: center;
-            }
-        }
         .merch{
+            position: relative;
             border: solid 1px grey;
             border-radius: 15px;
-            width: 40%;
             margin-top: 50px;
             margin: 1%;
-          
             grid-area: merch;
+            @include desktop {
+                width: 40%;
+                margin: auto;
+            }
+            .merch-title{
+                text-align: left;
+                padding: 0 20px;
+                display: inline-block;
+                margin: 0.2em;
+                @include desktop{
+                    margin:  20px;
+                    // text-align: center;
+                    display: block;
+                }
+            }
+            h3{
+                margin: 0.3em;
+                color: antiquewhite;
+                float: right;
+                font-size: 1.7em;
+                padding: 5px;
+                @include desktop{
+                    margin: 5px 50px 15px;
+                    padding: none;
+                    float: none;
+                }
+            }
+            img{
+                width: 100%;
+                height: auto;
+            }
+            p{
+                margin: 10px auto;
+                font-size: 1em;
+                text-align: center;
+            }
+            form{
+                text-align: center;
+                margin: 10px auto;
+                #add-to-cart{
+                    width: auto;
+                    height: 50px;
+                    position: relative;
+                }
+    
+            }
         }
-        .merch h3{
-        margin: 5px 50px 15px;
-        }
-        
-        .merch img{
-        width: 100%;
-        height: auto;
-        }
+                .paypal-secure{
+                    background: none;
+                    margin: auto;
+                }
         
         .merch-list {
         text-align: center;
@@ -555,6 +591,7 @@ body{
         justify-content: center;
         margin-top: 50px;
         }
+
     }
     footer{
         background-color: color(purple-darker);

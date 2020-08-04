@@ -544,28 +544,77 @@ body main .construction {
   width: 100%;
 }
 
-@media (min-width: 1000px) {
-  body main #merch-title {
-    text-align: center;
-  }
-}
-
 body main .merch {
+  position: relative;
   border: solid 1px grey;
   border-radius: 15px;
-  width: 40%;
   margin-top: 50px;
   margin: 1%;
   grid-area: merch;
 }
 
+@media (min-width: 1000px) {
+  body main .merch {
+    width: 40%;
+    margin: auto;
+  }
+}
+
+body main .merch .merch-title {
+  text-align: left;
+  padding: 0 20px;
+  display: inline-block;
+  margin: 0.2em;
+}
+
+@media (min-width: 1000px) {
+  body main .merch .merch-title {
+    margin: 20px;
+    display: block;
+  }
+}
+
 body main .merch h3 {
-  margin: 5px 50px 15px;
+  margin: 0.3em;
+  color: antiquewhite;
+  float: right;
+  font-size: 1.7em;
+  padding: 5px;
+}
+
+@media (min-width: 1000px) {
+  body main .merch h3 {
+    margin: 5px 50px 15px;
+    padding: none;
+    float: none;
+  }
 }
 
 body main .merch img {
   width: 100%;
   height: auto;
+}
+
+body main .merch p {
+  margin: 10px auto;
+  font-size: 1em;
+  text-align: center;
+}
+
+body main .merch form {
+  text-align: center;
+  margin: 10px auto;
+}
+
+body main .merch form #add-to-cart {
+  width: auto;
+  height: 50px;
+  position: relative;
+}
+
+body main .paypal-secure {
+  background: none;
+  margin: auto;
 }
 
 body main .merch-list {
@@ -581,13 +630,6 @@ body main #make-merch, body main #make-podcast {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 50px;
-}
-
-body main .skeletons {
-  display: inline;
-  position: relative;
-  margin: 150px;
-  width: 50%;
 }
 
 body footer {
