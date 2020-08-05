@@ -61,12 +61,13 @@ function createPodcast(){
 
 function createMerch(){
     const div = document.createElement('div');
+    const paypal = document.createElement('div')
     const h2 = document.createElement('h2');
     const img = document.createElement('img');
     const h3 = document.createElement('h3');
     const paragraph = document.createElement('p');
 
-    let title = prompt("What's the naem of the item?",'nothing');
+    let title = prompt("What's the name of the item?",'nothing');
     let cost = prompt('How much will it cost?', '$');
     let url = prompt("What's the img url?", "nothing");
     let description = prompt("What's the description?", "nothing");
@@ -75,6 +76,7 @@ function createMerch(){
 
     div.setAttribute('class', 'merch');
     h2.setAttribute('class', 'merch-title')
+    paypal.setAttribute('id', 'paypal-button-container')
     h2.innerHTML = newMerch.title;
     h3.innerHTML = "$" + newMerch.price;
     img.setAttribute('src', newMerch.pic);
@@ -84,11 +86,14 @@ function createMerch(){
     div.appendChild(h3);
     div.appendChild(img);
     div.appendChild(paragraph);
+    div.appendChild(paypal)
 
     document.getElementById('merch-container').appendChild(div);
 }
 
 document.getElementById('make-podcast').addEventListener('click', createPodcast);
 document.getElementById('make-merch').addEventListener('click', createMerch);
+
+
 
 

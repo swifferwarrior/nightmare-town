@@ -545,7 +545,7 @@ body main .construction {
 }
 
 body main #paypal-label {
-  margin: 80px auto 10px auto;
+  margin: 80px auto 0px auto;
 }
 
 @media (min-width: 1000px) {
@@ -554,19 +554,32 @@ body main #paypal-label {
   }
 }
 
+body main .store-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
 body main .merch {
   position: relative;
   border: solid 1px grey;
   border-radius: 15px;
   margin-top: 50px;
-  margin: 1%;
+  margin: 5%;
   grid-area: merch;
 }
 
 @media (min-width: 1000px) {
   body main .merch {
+    display: inline-block;
     width: 40%;
-    margin: auto;
+    margin: 1%;
+    height: 475px;
   }
 }
 
@@ -579,9 +592,8 @@ body main .merch .merch-title {
 
 @media (min-width: 1000px) {
   body main .merch .merch-title {
-    margin: 20px 50px 10px 50px;
     padding: 0;
-    display: block;
+    margin-left: 25px;
     font-size: 2.5em;
   }
 }
@@ -592,13 +604,15 @@ body main .merch h3 {
   float: right;
   font-size: 1.7em;
   padding: 5px;
+  font-family: "Tulpen One", Helvetica, sans-serif;
+  letter-spacing: 1.1;
 }
 
 @media (min-width: 1000px) {
   body main .merch h3 {
-    margin: 10px 50px;
+    margin: 10px 25px;
     padding: 0;
-    float: none;
+    font-size: 2.5em;
   }
 }
 
@@ -798,5 +812,10 @@ a:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
   color: #D9043D;
+}
+
+.paypal-powered-by {
+  margin: 0;
+  padding: 0;
 }
 /*# sourceMappingURL=styles.css.map */
